@@ -1,8 +1,8 @@
-first_name,middle_name,last_name,pasword,net_id,email
-John,Alexander,Smith,SmithPass123!,abc123,john.smith@example.com
-Emily, ,Johnson,SecurePwd456,def456,emily.johnson@example.com
-Michael,David,Williams,StrongPwd789,ghi789,michael.williams@example.com
-Sarah,,Brown,SecretPwd123,jkl123,sarah.brown@example.com
-David,Andrew,Jones,Pa$$w0rd,xyz456,david.jones@example.com
-Jennifer,Lynn,Miller,Password123,mno789,jennifer.miller@example.com
-Matthew,Ryan,Davis,SecurePassword1,pqr456,matthew.davis@example.com
+net_id
+abc123
+def456
+ghi789
+jkl123
+xyz456
+mno789
+pqr456
