@@ -1,16 +1,16 @@
 course_id,instructor_id,course_prefix,course_no,course_section,course_name,semester,course_year
-1,abc123,CS,1337,A,Introduction to Computer Science,Spring,2024
-2,def456,MATH,2334,B,Calculus II,Fall,2024
-3,def456,PHYS,1335,A,Physics I,Summer,2024
-4,ghi789,CHEM,1336,C,Organic Chemistry,Fall,2024
-5,jkl123,ENGL,1337,D,Composition and Rhetoric,Summer,2024
-6,xyz456,HIST,1345,A,American History: Civil War Era,Spring,2024
-7,mno789,ECON,1301,B,Principles of Microeconomics,Fall,2024
-8,pqr456,PSYC,1301,A,Introduction to Psychology,Winter,2024
-9,109,BIOL,1302,A,Introduction to Biology,Spring,2024
-10,xyz456,ARTS,1301,A,Art History: Renaissance to Modern,Fall,2024
-11,xyz456,MUSC,1301,A,Music Appreciation,Summer,2024
-12,jkl123,COMM,1301,A,Public Speaking,Fall,2024
-13,mno789,MKTG,1401,A,Marketing Management,Spring,2024
-14,def456,STAT,1201,A,Statistics II,Fall,2024
-15,pqr456,SOCI,1101,A,Introduction to Sociology,Summer,2024
+1,abc123,CS,1337,002,Introduction to Computer Science,Spring,2024
+2,def456,MATH,2334,005,Calculus II,Fall,2024
+3,def456,PHYS,1335,002,Physics I,Summer,2024
+4,ghi789,CHEM,1336,502,Organic Chemistry,Fall,2024
+5,jkl123,ENGL,1337,502,Composition and Rhetoric,Summer,2024
+6,xyz456,HIST,1345,002,American History: Civil War Era,Spring,2024
+7,mno789,ECON,1301,005,Principles of Microeconomics,Fall,2024
+8,pqr456,PSYC,1301,002,Introduction to Psychology,Winter,2024
+9,ghi789,BIOL,1302,002,Introduction to Biology,Spring,2024
+10,xyz456,ARTS,1301,002,Art History: Renaissance to Modern,Fall,2024
+11,xyz456,MUSC,1301,002,Music Appreciation,Summer,2024
+12,jkl123,COMM,1301,002,Public Speaking,Fall,2024
+13,mno789,MKTG,1401,002,Marketing Management,Spring,2024
+14,def456,STAT,1201,002,Statistics II,Fall,2024
+15,pqr456,SOCI,1101,002,Introduction to Sociology,Summer,2024
