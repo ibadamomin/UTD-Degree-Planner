@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS majors_in
     CONSTRAINT fk_major
         FOREIGN KEY (major_id) REFERENCES majors (major_id) ON UPDATE CASCADE, -- Deny any major deletion if in use.
 
-    CONSTRAINT fk_net_id
-        FOREIGN KEY (net_id) REFERENCES users (net_id) ON UPDATE CASCADE ON DELETE CASCADE -- Delete if the user is deleted.
+    CONSTRAINT fk_net_id 
+        FOREIGN KEY(net_id) REFERENCES students(net_id) ON UPDATE CASCADE ON DELETE CASCADE -- Delete if the user is deleted.
 );
 
 -- CREATE TABLE IF NOT EXISTS courses. Represents a specific course and section during a semester.
