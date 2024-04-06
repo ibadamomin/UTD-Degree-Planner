@@ -1,0 +1,13 @@
+student_id,course_id,completed
+stu123, 1, true
+stu123, 2, false
+stu123, 3, false
+vwx456, 1, true
+vwx456, 5, true
+vwx456, 6, true
+yza789, 2, true
+yza789, 3, true
+yza789, 4, false
+bcd456, 1, true
+bcd456, 2, true
+bcd456, 3, false
