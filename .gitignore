@@ -1,0 +1,5 @@
+.idea/
+.env
+
+# Save space by ignoring vendor/
+vendor/

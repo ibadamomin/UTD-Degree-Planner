@@ -2,13 +2,16 @@
 
 namespace DegreePlanner\Models\User;
 
-
 use DegreePlanner\Database\Database;
 
 class User {
     public $id;
-    public $email;
-    public $password_hash;
+    private $email;
+    private $password_hash;
+    public $first_name;
+    public $middle_name;
+    public $last_name;
+    public $role;
 
     public static function findUserByNetId($net_id) {
         $db = new Database();
@@ -37,19 +40,21 @@ class User {
         return new User($user);
     }
 
+    public static function register($net_id) {
+        return self::findUserByNetId($net_id);
+    }
+
     public static function login($net_id, $password): ?User {
         $user = self::findUserByNetId($net_id);
         if ($user == null) {
-            $password_hash = ''; // We want to hash even when user DNE to prevent timing attacks.
-        } else {
-            $password_hash = $user->password_hash;
-        }
-
-        if (password_verify($password, $password_hash)) {
-            return $user;
-        } else {
+            password_hash('', PASSWORD_ARGON2ID); // We want to hash even when user DNE
             return null;
         }
+
+        $password_hash = $user->password_hash;
+
+        // Compare the given password to the stored password
+        return password_verify($password, $password_hash) ? $user : null;
     }
 
     public function __construct($user) {

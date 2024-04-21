@@ -1,16 +1,17 @@
 <?php
 
-require_once "../models/User.php";
-require_once "../includes/Database.php";
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
 use DegreePlanner\Models\User\User;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
 session_start();
+
+print phpinfo();
 
 if (isset($_SESSION['user_id'])) {
     header("Location: index.php");
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: login.php?error=Invalid username or password");
         exit();
     }
-
+    var_dump($user);
     $_SESSION['user_id'] = htmlspecialchars($user->id);
     header("Location: index.php");
     exit();
