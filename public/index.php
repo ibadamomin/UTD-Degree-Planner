@@ -1,15 +1,7 @@
 <?php
-require_once __DIR__.'/../vendor/autoload.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+require_once __DIR__ . '/../vendor/autoload.php';
 
 session_start();
-
-//$user = User::register("abc123");
-//print 'a';
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +15,7 @@ if (isset($_SESSION['user_id'])) {
 }
 ?>
 <a href="login.php">Login</a>
+<a href="register.php">Register</a>
 <a href="logout.php">Logout</a>
 
 </body>

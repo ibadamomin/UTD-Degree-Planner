@@ -1,26 +1,18 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use DegreePlanner\Models\User\User;
 
 session_start();
-
-print phpinfo();
 
 if (isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
 }
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $net_id = trim($_POST['net_id']);
+    $net_id = htmlspecialchars(trim($_POST['net_id']));
     $password = $_POST['password'];
 
     if (empty($net_id) || empty($password)) {
