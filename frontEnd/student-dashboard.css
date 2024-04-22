@@ -1,92 +1,38 @@
-.student-dashboard-child {
+.student-dashboard-header {
   align-self: stretch;
   height: 92px;
   position: relative;
   background-color: var(--color-seagreen);
 }
-.student-dashboard-inner,
-.student-dashboard-item {
-  width: 302px;
-  height: 12px;
-  position: relative;
-  border-radius: var(--br-41xl);
-  background-color: var(--color-darkgray);
-  display: none;
-}
-.student-dashboard-inner {
-  width: 207px;
-  background-color: var(--color-gold);
-}
-.ellipse-div {
-  width: 393px;
-  height: 393px;
-  border-radius: 50%;
-  background-color: var(--color-gainsboro);
-}
-.ellipse-div,
-.frame-child16,
-.student-dashboard-child1 {
-  position: relative;
-  display: none;
-  max-width: 100%;
-}
-.student-dashboard-child1 {
-  width: 393px;
-  height: 393px;
-  border-radius: 50%;
-  background-color: var(--color-limegreen-200);
-}
-.frame-child16 {
-  height: 233px;
-  width: 1204px;
-  border-radius: var(--br-21xl);
-  background-color: var(--color-black);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.name-class {
+.user-name-class {
   position: relative;
   font-weight: 600;
   z-index: 1;
 }
-.major-and-other {
+.user-major {
   position: relative;
   font-size: var(--font-size-5xl);
   z-index: 1;
 }
-.name-class-parent {
+.user-info-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1px;
 }
-.frame-child17 {
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  background-color: #c5c5c5;
-  z-index: 1;
-}
-.frame-wrapper4,
-.rectangle-parent1,
-.rectangle-wrapper {
+.user-info,
+.user-rectangle {
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
 }
-.rectangle-wrapper {
-  height: 155px;
-  width: 150px;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-8xs) 0 0;
-}
-.frame-wrapper4,
-.rectangle-parent1 {
+.user-info,
+.user-rectangle {
   flex-direction: row;
   max-width: 100%;
 }
-.rectangle-parent1 {
+.user-rectangle {
   flex: 1;
   border-radius: var(--br-21xl);
   background-color: var(--color-black);
@@ -95,23 +41,13 @@
   padding: 37px 58px 41px;
   gap: var(--gap-xl);
 }
-.frame-wrapper4 {
+.user-info {
   align-self: stretch;
   justify-content: flex-start;
   padding: 0 var(--padding-10xl) 0 var(--padding-9xl);
 }
-.frame-child18 {
-  height: 506px;
-  width: 1261px;
-  position: relative;
-  border-radius: var(--br-21xl);
-  background-color: var(--color-black);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  display: none;
-  max-width: 100%;
-}
-.core-curriculum,
-.degree-progress,
+.core-curriculum-text,
+.degree-progress-text,
 .frame-child19 {
   position: relative;
   z-index: 1;
@@ -136,14 +72,6 @@
 .core-curriculum-parent {
   flex-direction: row;
   gap: var(--gap-7xs);
-}
-.frame-child20 {
-  height: 12px;
-  flex: 1;
-  position: relative;
-  border-radius: var(--br-41xl);
-  background-color: var(--color-limegreen-100);
-  z-index: 2;
 }
 .rectangle-frame {
   align-self: stretch;
@@ -199,25 +127,25 @@
   font-size: var(--font-size-5xl);
 }
 .comm-parent,
-.degree-progress-parent,
-.frame-parent10 {
+.degree-progress-text-parent,
+.core-curriculum {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.frame-parent10 {
+.core-curriculum {
   align-self: stretch;
   gap: var(--gap-6xs);
 }
-.degree-progress-parent {
+.degree-progress-text-parent {
   width: 307px;
   padding: 0 var(--padding-8xs) 0 0;
   box-sizing: border-box;
   gap: 40px;
 }
 .frame-child23,
-.major-requirements {
+.major-requirements-text {
   position: relative;
   z-index: 1;
 }
@@ -243,17 +171,6 @@
   flex-direction: row;
   gap: var(--gap-10xs);
 }
-.frame-child24 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: var(--br-41xl);
-  background-color: var(--color-darkgray);
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 1;
-}
 .frame-child25,
 .rectangle-parent4 {
   height: 12px;
@@ -274,7 +191,7 @@
   z-index: 1;
 }
 .frame-parent11,
-.frame-wrapper5 {
+.major-requirements {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -284,13 +201,13 @@
   align-self: stretch;
   gap: var(--gap-6xs);
 }
-.frame-wrapper5 {
+.major-requirements {
   width: 307px;
-  padding: var(--padding-59xl) 0 0;
+  /* padding: var(--padding-59xl) 0 0; */
   box-sizing: border-box;
 }
 .frame-child26,
-.free-electives {
+.free-electives-text {
   position: relative;
   z-index: 1;
 }
@@ -315,17 +232,6 @@
   flex-direction: row;
   gap: 9px;
 }
-.frame-child27 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: var(--br-41xl);
-  background-color: var(--color-darkgray);
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 1;
-}
 .frame-child28,
 .rectangle-parent5 {
   height: 12px;
@@ -346,7 +252,7 @@
   z-index: 1;
 }
 .frame-parent12,
-.frame-wrapper6 {
+.free-electives {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -356,21 +262,20 @@
   align-self: stretch;
   gap: var(--gap-6xs);
 }
-.frame-wrapper6 {
+.free-electives {
   width: 302px;
-  padding: var(--padding-59xl) 0 0;
+  /* padding: var(--padding-59xl) 0 0; */
   box-sizing: border-box;
 }
-.frame-child29,
-.rectangle-parent2 {
+.degree-progess-rectangle {
   border-radius: var(--br-21xl);
   background-color: var(--color-black);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 100%;
 }
-.rectangle-parent2 {
+.degree-progess-rectangle {
   align-self: stretch;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
@@ -378,11 +283,8 @@
   box-sizing: border-box;
   gap: var(--gap-xl);
 }
-.frame-child29 {
-  height: 579px;
-  width: 579px;
-  position: relative;
-  display: none;
+.degree-categories {
+  display: flex;
 }
 .frame-child30,
 .frame-child31 {
@@ -457,8 +359,8 @@
   min-width: 360px;
 }
 .frame-parent13,
-.frame-parent8,
-.frame-parent9,
+.dashboard-frame,
+.degree-progess,
 .frame-wrapper8 {
   display: flex;
   align-items: flex-start;
@@ -471,15 +373,15 @@
   gap: 107px;
   font-size: var(--font-size-21xl);
 }
-.frame-parent8,
-.frame-parent9 {
+.dashboard-frame,
+.degree-progess {
   align-self: stretch;
   flex-direction: column;
 }
-.frame-parent9 {
+.degree-progess {
   gap: var(--gap-16xl);
 }
-.frame-parent8 {
+.dashboard-frame {
   gap: 49px;
 }
 .free-electives1 {
@@ -494,13 +396,13 @@
   padding: 0 var(--padding-xl) 0 377px;
   font-size: var(--font-size-21xl);
 }
-.frame-parent7,
-.student-dashboard-inner1 {
+.dashboard-section,
+.student-dashboard-inner {
   display: flex;
   align-items: flex-start;
   max-width: 100%;
 }
-.frame-parent7 {
+.dashboard-section {
   width: 1261px;
   flex-direction: column;
   justify-content: flex-start;
@@ -510,7 +412,7 @@
   color: var(--color-white);
   font-family: var(--font-roboto);
 }
-.student-dashboard-inner1 {
+.student-dashboard-inner {
   align-self: stretch;
   flex-direction: row;
   justify-content: center;
@@ -532,24 +434,24 @@
   letter-spacing: normal;
 }
 @media screen and (max-width: 1200px) {
-  .rectangle-parent1 {
+  .user-rectangle {
     padding-left: var(--padding-10xl);
     padding-right: var(--padding-10xl);
     box-sizing: border-box;
   }
-  .frame-parent7 {
+  .dashboard-section {
     gap: 94px 189px;
   }
 }
 @media screen and (max-width: 1050px) {
-  .core-curriculum,
-  .degree-progress,
-  .free-electives,
-  .major-requirements,
-  .name-class {
+  .core-curriculum-text,
+  .degree-progress-text,
+  .free-electives-text,
+  .major-requirements-text,
+  .user-name-class {
     font-size: var(--font-size-7xl);
   }
-  .rectangle-parent2 {
+  .degree-progess-rectangle {
     flex-wrap: wrap;
   }
   .core-curriculum1,
@@ -568,10 +470,10 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .rectangle-parent1 {
+  .user-rectangle {
     flex-wrap: wrap;
   }
-  .rectangle-parent2 {
+  .degree-progess-rectangle {
     padding-top: var(--padding-4xl);
     padding-bottom: 148px;
     box-sizing: border-box;
@@ -584,17 +486,17 @@
   .frame-parent13 {
     gap: 107px 27px;
   }
-  .frame-parent9 {
+  .degree-progess {
     gap: 17px 35px;
   }
-  .frame-parent8 {
+  .dashboard-frame {
     gap: 24px 49px;
   }
   .free-electives-wrapper {
     padding-left: 188px;
     box-sizing: border-box;
   }
-  .frame-parent7 {
+  .dashboard-section {
     gap: 47px 189px;
   }
   .student-dashboard {
@@ -603,18 +505,18 @@
 }
 @media screen and (max-width: 450px) {
   .comm,
-  .core-curriculum,
-  .degree-progress,
-  .major-and-other,
+  .core-curriculum-text,
+  .degree-progress-text,
+  .user-major,
   .math,
-  .name-class {
+  .user-name-class {
     font-size: var(--font-size-lgi);
   }
-  .degree-progress-parent {
+  .degree-progress-text-parent {
     gap: 20px 40px;
   }
-  .free-electives,
-  .major-requirements {
+  .free-electives-text,
+  .major-requirements-text {
     font-size: var(--font-size-lgi);
   }
   .rectangle-parent6 {
@@ -637,7 +539,7 @@
     padding-left: var(--padding-xl);
     box-sizing: border-box;
   }
-  .frame-parent7 {
+  .dashboard-section {
     gap: 24px 189px;
   }
   .student-dashboard {
