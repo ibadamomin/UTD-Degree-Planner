@@ -1,5 +1,7 @@
 .idea/
 .env
-
+composer.lock
+DigiCertGlobalRootCA.crt.pem
+package.xml
 # Save space by ignoring vendor/
 vendor/
