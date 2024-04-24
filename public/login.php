@@ -58,3 +58,50 @@ if (isset($_GET['error'])) {
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Proxima Nova:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login-screen-dark">
+      <form class="frame-form">
+        <div class="login-wrapper">
+          <div class="welcome-back-parent">
+            <h1 class="welcome-back">Welcome back!</h1>
+            <div class="enter-your-utd">Enter your UTD email and password</div>
+          </div>
+          <div class="user-wrapper">
+            <div class="users">
+              <div class="student">Student</div>
+              <div class="student">Student</div>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <input class="email" placeholder="Email" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <input class="password" placeholder="Password" type="text" />
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="button">
+            <div class="log-in">Log in</div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
