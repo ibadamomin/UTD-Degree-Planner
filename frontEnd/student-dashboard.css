@@ -285,6 +285,7 @@
 }
 .degree-categories {
   display: flex;
+  justify-content: space-between;
 }
 .frame-child30,
 .frame-child31 {
@@ -358,7 +359,7 @@
   box-sizing: border-box;
   min-width: 360px;
 }
-.frame-parent13,
+.available-classes,
 .dashboard-frame,
 .degree-progess,
 .frame-wrapper8 {
@@ -367,7 +368,9 @@
   justify-content: flex-start;
   max-width: 100%;
 }
-.frame-parent13 {
+.available-classes {
+  display: grid;
+  grid-template-columns: 50% 50%;
   width: 1046px;
   flex-direction: row;
   gap: 107px;
@@ -387,7 +390,7 @@
 .free-electives1 {
   position: relative;
 }
-.free-electives-wrapper {
+/* .free-electives-wrapper {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -395,7 +398,7 @@
   justify-content: center;
   padding: 0 var(--padding-xl) 0 377px;
   font-size: var(--font-size-21xl);
-}
+} */
 .dashboard-section,
 .student-dashboard-inner {
   display: flex;
@@ -461,7 +464,7 @@
   .frame-wrapper8 {
     flex: 1;
   }
-  .frame-parent13 {
+  .available-classes {
     flex-wrap: wrap;
     gap: 107px 53px;
   }
@@ -483,7 +486,7 @@
     padding-bottom: var(--padding-41xl);
     box-sizing: border-box;
   }
-  .frame-parent13 {
+  .available-classes {
     gap: 107px 27px;
   }
   .degree-progess {

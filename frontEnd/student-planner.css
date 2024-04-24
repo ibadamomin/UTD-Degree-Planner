@@ -237,7 +237,7 @@
   padding: var(--padding-17xl) var(--padding-16xl);
 }
 .frame-child8,
-.frame-parent1,
+.planner-section,
 .frame-parent5 {
   display: flex;
   align-items: flex-start;
@@ -249,7 +249,7 @@
   flex-direction: row;
   gap: var(--gap-smi);
 }
-.frame-parent1 {
+.planner-section {
   flex: 1;
   flex-direction: column;
   gap: 34px;
@@ -409,12 +409,12 @@
   gap: 24px;
 }
 .frame-section,
-.rectangle-parent {
+.class-selector {
   display: flex;
   justify-content: flex-start;
   max-width: 100%;
 }
-.rectangle-parent {
+.class-selector {
   width: 420px;
   border-radius: var(--br-21xl);
   background-color: var(--color-black);
@@ -465,7 +465,7 @@
   .rectangle-group {
     flex: 1;
   }
-  .rectangle-parent {
+  .class-selector {
     flex: 1;
     padding-top: 26px;
     padding-bottom: 809px;
@@ -481,7 +481,7 @@
   .spring-20xx {
     font-size: var(--font-size-13xl);
   }
-  .rectangle-parent {
+  .class-selector {
     padding-top: var(--padding-xl);
     padding-bottom: 526px;
     box-sizing: border-box;
@@ -494,8 +494,8 @@
   .frame-parent5 {
     flex-wrap: wrap;
   }
-  .frame-parent1,
-  .rectangle-parent {
+  .planner-section,
+  .class-selector {
     min-width: 100%;
   }
   .frame-section {
@@ -519,7 +519,7 @@
     padding-bottom: 65px;
     box-sizing: border-box;
   }
-  .frame-parent1 {
+  .planner-section {
     gap: 17px 34px;
   }
   .search {
@@ -529,7 +529,7 @@
   .cs {
     font-size: var(--font-size-5xl);
   }
-  .rectangle-parent {
+  .class-selector {
     gap: 26px 53px;
     padding-bottom: 342px;
     box-sizing: border-box;
