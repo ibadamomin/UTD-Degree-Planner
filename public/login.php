@@ -90,10 +90,10 @@ if (isset($_GET['error'])) {
             </div>
           </div> -->
           <div class="input-wrapper">
-            <input class="net-id" id="net_id" placeholder="Net ID" type="text" required/>
+            <input class="net-id" id="net_id" name="net_id" placeholder="Net ID" type="text" required/>
           </div>
           <div class="input-wrapper">
-            <input class="password" id="password" placeholder="Password" type="password" required/>
+            <input class="password" id="password" name="password" placeholder="Password" type="password" required/>
           </div>
         </div>
         <div class="button-wrapper">
