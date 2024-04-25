@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./student-dashboard.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
@@ -15,112 +17,42 @@
       href="https://fonts.googleapis.com/css2?family=Proxima Nova:wght@400&display=swap"
     />
   </head>
-  <body>
-    <div class="student-dashboard">
-      <div class="student-dashboard-header"></div>
-      <main class="student-dashboard-inner">
-        <section class="dashboard-section">
-          <div class="dashboard-frame">
-            <div class="user-info">
-              <div class="user-rectangle">
-                <div class="user-info-text">
-                  <div class="user-name-class">Name - Class</div>
-                  <div class="user-major">Major and other info</div>
+  <body class="bg-gray-900 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow">
+            <!-- Header content here -->
+        </header>
+        <main class="flex-grow container mx-auto px-4 py-6">
+            <section class="bg-white p-4 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <h2 class="text-xl font-semibold text-gray-900">Student Information</h2>
+                    <div class="text-sm text-gray-600">Name - Class, Major, and other info</div>
                 </div>
-              </div>
-            </div>
-            <div class="degree-progess">
-              <div class="degree-progess-rectangle">
-                <div class="degree-progress-parent">
-                  <div class="degree-progress-text">Degree Progress</div>
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Degree Progress</h3>
+                    <div class="mt-2">
+                        <div class="text-sm text-gray-600">Core Curriculum</div>
+                        <!-- Additional content -->
+                    </div>
                 </div>
-                <div class="degree-categories">
-                  <div class="core-curriculum">
-                    <div class="core-curriculum-parent">
-                      <div class="core-curriculum-text">Core Curriculum</div>
-                      <div class="polygon-frame">
-                        <img
-                          class="frame-child19"
-                          alt=""
-                          src="./public/polygon-1.svg"
-                        />
-                      </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-gray-200 rounded-lg">
+                        <h4 class="font-semibold">Core Curriculum</h4>
+                        <!-- Content -->
                     </div>
-                    <div class="comm-parent">
-                      <div class="comm">Comm.</div>
-                      <div class="rectangle-parent3">
-                        <div class="frame-child21"></div>
-                        <div class="math-parent">
-                          <div class="math">Math</div>
-                          <div class="frame-child22"></div>
-                        </div>
-                      </div>
+                    <div class="p-4 bg-gray-200 rounded-lg">
+                        <h4 class="font-semibold">Major Requirements</h4>
+                        <!-- Content -->
                     </div>
-                  </div>
-                  <div class="major-requirements">
-                    <div class="frame-parent11">
-                      <div class="major-requirements-parent">
-                        <div class="major-requirements-text">Major Requirements</div>
-                        <div class="polygon-wrapper1">
-                          <img
-                            class="frame-child23"
-                            loading="lazy"
-                            alt=""
-                            src="./public/polygon-2.svg"
-                          />
-                        </div>
-                      </div>
-                      <div class="rectangle-parent4">
-                        <div class="frame-child25"></div>
-                      </div>
+                    <div class="p-4 bg-gray-200 rounded-lg">
+                        <h4 class="font-semibold">Free Electives</h4>
+                        <!-- Content -->
                     </div>
-                  </div>
-                  <div class="free-electives">
-                    <div class="frame-parent12">
-                      <div class="free-electives-parent">
-                        <div class="free-electives-text">Free Electives</div>
-                        <div class="polygon-wrapper2">
-                          <img
-                            class="frame-child26"
-                            loading="lazy"
-                            alt=""
-                            src="./public/polygon-2.svg"
-                          />
-                        </div>
-                      </div>
-                      <div class="rectangle-parent5">
-                        <div class="frame-child28"></div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              </div>
-              <div class="frame-parent13">
-                <div class="rectangle-parent6">
-                  <div class="frame-wrapper7">
-                    <div class="ellipse-parent">
-                      <div class="frame-child30"></div>
-                      <div class="ellipse-group">
-                        <div class="frame-child31"></div>
-                        <div class="frame-child32"></div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="frame-wrapper8">
-                  <div class="core-curriculum-group">
-                    <div class="core-curriculum1">Core Curriculum</div>
-                    <div class="major-requirements1">Major Requirements</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="free-electives-wrapper">
-            <div class="free-electives1">Free Electives</div>
-          </div>
-        </section>
-      </main>
+                <!-- Your pie chart and associated scripts here -->
+            </section>
+        </main>
     </div>
-  </body>
+</body>
+
 </html>
