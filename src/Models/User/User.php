@@ -8,10 +8,10 @@ use DegreePlanner\Models\Major\Major;
 class User {
     public $id;
     private $email;
-    private $password_hash;
-    public $first_name;
-    public $middle_name;
-    public $last_name;
+    private $passwordHash;
+    public $firstName;
+    public $middleName;
+    public $lastName;
     public $role;
     public $advisor;
     public $majors;
@@ -108,7 +108,7 @@ class User {
             return null;
         }
 
-        $password_hash = $user->password_hash;
+        $password_hash = $user->passwordHash;
 
         // Compare the given password to the stored password
         return password_verify($password, $password_hash) ? $user : null;
@@ -166,13 +166,21 @@ class User {
         return true;
     }
 
+    public function hasMajor($major) {
+        return in_array($major, $this->majors);
+    }
+
+    public function getFullName() {
+        return $this->firstName . ' ' . $this->middleName . ' ' . $this->lastName;
+    }
+
     public function __construct($userDetails) {
         $this->id = $userDetails['net_id'];
         $this->email = $userDetails['email'];
-        $this->password_hash = $userDetails['password_hash'];
-        $this->first_name = $userDetails['first_name'];
-        $this->middle_name = $userDetails['middle_name'];
-        $this->last_name = $userDetails['last_name'];
+        $this->passwordHash = $userDetails['password_hash'];
+        $this->firstName = $userDetails['first_name'];
+        $this->middleName = $userDetails['middle_name'];
+        $this->lastName = $userDetails['last_name'];
         $this->role = $userDetails['role'];
         $this->advisor = $userDetails['advisor_id'];
         $this->majors = $userDetails["majors"];

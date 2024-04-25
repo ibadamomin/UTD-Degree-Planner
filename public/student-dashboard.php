@@ -30,7 +30,7 @@ if ($user == null) {
     header("Location: login.php");
     exit();
 }
-$name = htmlspecialchars($user->first_name . ' ' . $user->middle_name . ' ' . $user->last_name);
+$name = htmlspecialchars($user->getFullName());
 
 // Get major info
 $student_majors = $user->majors;
@@ -38,7 +38,7 @@ $student_majors = $user->majors;
 // Get advisor name
 $advisor = User::findUserByNetId($user->advisor);
 if ($advisor != null) {
-    $advisor = htmlspecialchars($advisor->first_name . ' ' . $advisor->last_name);
+    $advisor = htmlspecialchars($advisor->getFullName());
 }
 
 ?>
@@ -163,40 +163,40 @@ if ($advisor != null) {
                 </div>
                 <div class="available-classes">
                     <div class="rectangle-parent6">
-                    <canvas id="pie-chart"></canvas>
+                        <canvas id="pie-chart"></canvas>
                         <script>
-                        function parseCSV(csv) {
-                            const lines = csv.split('\n');
-                            const result = [];
-                            const headers = lines[0].split(',');
+                            function parseCSV(csv) {
+                                const lines = csv.split('\n');
+                                const result = [];
+                                const headers = lines[0].split(',');
 
-                            for (let i = 1; i < lines.length; i++) {
-                                const obj = {};
-                                const currentLine = lines[i].split(',');
+                                for (let i = 1; i < lines.length; i++) {
+                                    const obj = {};
+                                    const currentLine = lines[i].split(',');
 
-                                for (let j = 0; j < headers.length; j++) {
-                                    obj[headers[j]] = currentLine[j];
+                                    for (let j = 0; j < headers.length; j++) {
+                                        obj[headers[j]] = currentLine[j];
+                                    }
+
+                                    result.push(obj);
                                 }
 
-                                result.push(obj);
+                                return result;
                             }
 
-                            return result;
-                        }
+                            // Count occurrences of each course type
+                            function countCourseTypes(data) {
+                                const counts = {};
 
-                        // Count occurrences of each course type
-                        function countCourseTypes(data) {
-                            const counts = {};
+                                data.forEach(course => {
+                                    const courseType = course.course_type;
+                                    counts[courseType] = (counts[courseType] || 0) + 1;
+                                });
 
-                            data.forEach(course => {
-                                const courseType = course.course_type;
-                                counts[courseType] = (counts[courseType] || 0) + 1;
-                            });
+                                return counts;
+                            }
 
-                            return counts;
-                        }
-
-                        const csvData = `course_id,course_prefix,course_number,course_name,course_type,credits
+                            const csvData = `course_id,course_prefix,course_number,course_name,course_type,credits
                                         1,RHET,1302,Rhetoric,Core,3
                                         2,ECS,3390,Professional and Technical Communication,Core,3
                                         3,MATH,2417,Calculus I,Core,3
@@ -234,33 +234,33 @@ if ($advisor != null) {
                                         35,CS,4352,Human-Computer Interaction I,Major Requirements,3
                                         36,CS,4353,Human-Computer Interaction II,Major Requirements,3`;
 
-                        const courses = parseCSV(csvData);
-                        const counts = countCourseTypes(courses);
+                            const courses = parseCSV(csvData);
+                            const counts = countCourseTypes(courses);
 
-                        const labels = Object.keys(counts);
-                        const data = Object.values(counts);
+                            const labels = Object.keys(counts);
+                            const data = Object.values(counts);
 
-                        const ctx = document.getElementById('pie-chart').getContext('2d');
+                            const ctx = document.getElementById('pie-chart').getContext('2d');
 
-                        new Chart(ctx, {
-                            type: 'pie',
-                            data: {
-                                labels: labels,
-                                datasets: [{
-                                    data: data,
-                                    backgroundColor: [
-                                        '#FF6384',
-                                        '#36A2EB',
-                                    ]
-                                }]
-                            },
-                            options: {
-                                responsive: true,
-                                legend: {
-                                    position: 'right',
+                            new Chart(ctx, {
+                                type: 'pie',
+                                data: {
+                                    labels: labels,
+                                    datasets: [{
+                                        data: data,
+                                        backgroundColor: [
+                                            '#FF6384',
+                                            '#36A2EB',
+                                        ]
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    legend: {
+                                        position: 'right',
+                                    }
                                 }
-                            }
-                        });
+                            });
                         </script>
                     </div>
                     <div class="frame-wrapper8">

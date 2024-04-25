@@ -9,16 +9,6 @@ class Major {
     public $major_name;
     public $degree_type;
 
-//    public static function getStudentMajors($net_id): array {
-//        $db = new Database();
-//        $db = $db->db();
-//
-//        $major_arr = self::getStudentMajorsWithDb($db, $net_id);
-//        $db->close();
-//
-//        return $major_arr;
-//    }
-
     public static function getStudentMajorsWithDb($db, $net_id): array {
         $q = "SELECT * FROM majors_in WHERE net_id = ?";
         $stmt = $db->prepare($q);
