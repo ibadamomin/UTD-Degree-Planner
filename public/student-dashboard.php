@@ -101,7 +101,7 @@ if ($advisor != null) {
                                         <img
                                                 class="frame-child19"
                                                 alt=""
-                                                src="./public/polygon-1.svg"
+                                                src="images/polygon-1.svg"
                                         />
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@ if ($advisor != null) {
                                                     class="frame-child23"
                                                     loading="lazy"
                                                     alt=""
-                                                    src="./public/polygon-2.svg"
+                                                    src="images/polygon-2.svg"
                                             />
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@ if ($advisor != null) {
                                                     class="frame-child26"
                                                     loading="lazy"
                                                     alt=""
-                                                    src="./public/polygon-2.svg"
+                                                    src="images/polygon-2.svg"
                                             />
                                         </div>
                                     </div>
