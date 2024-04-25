@@ -14,7 +14,7 @@
   display: inline-block;
 }
 .enter-your-utd {
-  font-size: 22px;
+  font-size: 20px;
 }
 .welcome-back-parent {
   display: flex;
@@ -62,7 +62,7 @@
   max-width: 100%;
 }
 
-.email {
+.net-id {
   width: 172px;
   border: 0;
   outline: 0;
@@ -105,7 +105,7 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   padding: 0 0 var(--padding-3xs);
   gap: 25px;
@@ -137,7 +137,7 @@
   text-align: center;
   z-index: 2;
 }
-.button,
+
 .button-wrapper {
   display: flex;
   flex-direction: row;
@@ -150,10 +150,17 @@
   background-color: var(--color-seagreen);
   width: 169px;
   border-radius: var(--br-xl);
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   box-sizing: border-box;
   white-space: nowrap;
   z-index: 1;
+  /* flex: 1; */
+  position: relative;
+  font-size: 28px;
+  font-family: var(--font-roboto);
+  color: var(--color-black);
+  text-align: center;
+  /* z-index: 2; */
 }
 .button:hover {
   background-color: #47bf94;

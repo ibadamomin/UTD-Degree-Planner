@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
@@ -56,7 +56,7 @@ if (isset($_GET['error'])) {
 }
 ?>
 </body>
-</html>
+</html> -->
 
 <!DOCTYPE html>
 <html>
@@ -77,29 +77,27 @@ if (isset($_GET['error'])) {
   </head>
   <body>
     <div class="login-screen-dark">
-      <form class="frame-form">
+      <form class="frame-form" id="login" action="login.php" method="POST">
         <div class="login-wrapper">
           <div class="welcome-back-parent">
             <h1 class="welcome-back">Welcome back!</h1>
-            <div class="enter-your-utd">Enter your UTD email and password</div>
+            <div class="enter-your-utd">Enter your UTD Net ID and password</div>
           </div>
-          <div class="user-wrapper">
+          <!-- <div class="user-wrapper">
             <div class="users">
               <div class="student">Student</div>
-              <div class="student">Student</div>
+              <div class="student">Advisor</div>
             </div>
+          </div> -->
+          <div class="input-wrapper">
+            <input class="net-id" id="net_id" placeholder="Net ID" type="text" required/>
           </div>
           <div class="input-wrapper">
-            <input class="email" placeholder="Email" type="text" />
-          </div>
-          <div class="input-wrapper">
-            <input class="password" placeholder="Password" type="text" />
+            <input class="password" id="password" placeholder="Password" type="text" required/>
           </div>
         </div>
         <div class="button-wrapper">
-          <button class="button">
-            <div class="log-in">Log in</div>
-          </button>
+          <button class="button" type="submit" value="submit"> Log in </button>
         </div>
       </form>
     </div>
