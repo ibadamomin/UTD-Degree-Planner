@@ -35,14 +35,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form id="login" action="login.php" method="POST">
+    <label for="net_id">Net ID: </label>
+    <input type="text" id="net_id" name="net_id" required>*<br>
+
+    <label for="password">Password: </label>
+    <input type="password" id="password" name="password" required>*<br>
+
+    <button type="submit" value="Submit">Submit</button>
+
+</form>
+<?php
+if (isset($_GET['error'])) {
+    echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
+}
+?>
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./css/global.css"/>
-    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="../frontEnd/global.css" />
+    <link rel="stylesheet" href="../frontEnd/index.css" />
     <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
@@ -74,14 +99,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
         <div class="button-wrapper">
-            <button class="button" type="submit" value="submit"> Log in</button>
-            <?php
-            if (isset($_GET['error'])) {
-                echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
-            }
-            ?>
+            <button class="button" type="submit" value="submit"> Log in </button>
         </div>
     </form>
+    <?php
+    if (isset($_GET['error'])) {
+        echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
+    }
+    ?>
 </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+course_id,course_prefix,course_number,course_name,course_type,credits
+1,RHET,1302,Rhetoric,Core,3
+2,ECS,3390,Professional and Technical Communication,Core,3
+3,MATH,2417,Calculus I,Core,3
+4,PHYS,2325,Mechanics,Core,3
+5,PHYS,2326,Electromagnetism and Waves,Core,3
+6,GOVT,2305,American National Government,Core,3
+7,GOVT,2306,State and Local Government,Core,3
+8,MATH,2419,Calculus II,Core,4
+9,PHYS,2125,Physics Laboratary I,Core,3
+10,ECS,1100,Introduction to Engineering and Computer Science,Major Requirements,1
+11,CS,1200,Introduction to Computer Science and Software Engineering,Major Requirements,2
+12,CS,1136,Computer Science Laboratory,Major Requirements,1
+13,CS,1336,Programming Fundamentals,Major Requirements,1
+14,CS,1337,Computer Science I,Major Requirements,3
+15,CS,2305,Discrete Mathematics for Computing I,Major Requirements,3
+16,CS,2336,Computer Science II,Major Requirements,3
+17,CS,2340,Computer Architecture,Major Requirements,3
+18,MATH,2418,Linear Algebra,Major Requirements,3
+19,PHYS,2126,Physics Laboratory II,Major Requirements,1
+20,CS,3162,Professional Responsibility in Computer Science and Software Engineering,Major Requirements,3
+21,CS,3305,Discrete Mathematics for Computing II,Major Requirements,3
+22,CS,3341,Probability and Statistics in Computer Science and Software Engineering,Major Requirements,3
+23,CS,3345,Data Structures and Introduction to Algorithmic Analysis,Major Requirements,3
+24,CS,3354,Software Engineering,Major Requirements,3
+25,CS,3377,Systems Programming in UNIX and Other Environments,Major Requirements,3
+26,CS,3390,Professional and Technical Communication,Major Requirements,1
+27,CS,4141,Digital Systems Laboratory,Major Requirements,1
+28,CS,4337,Programming Language Paradigms,Major Requirements,3
+29,CS,4341,Digital Logic and Computer Design,Major Requirements,3
+30,CS,4347,Database Systems,Major Requirements,3
+31,CS,4348,Operating Systems Concepts,Major Requirements,3
+32,CS,4349,Advanced Algorithm Design and Analysis,Major Requirements,3
+33,CS,4384,Automata Theory,Major Requirements,3
+34,CS,4485,Computer Science Project,Major Requirements,4
+35,CS,4352,Human-Computer Interaction I,Major Requirements,3
+36,CS,4353,Human-Computer Interaction II,Major Requirements,3
