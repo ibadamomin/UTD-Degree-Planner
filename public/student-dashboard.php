@@ -14,8 +14,13 @@ if (!isset($_SESSION["user_id"]) || !isset($_SESSION["role"])) {
 }
 
 // Redirect if not student
-if ($_SESSION["role"] != 'student') {
+if ($_SESSION["role"] == 'faculty') {
     header("Location: advisor-dashboard.php");
+    exit();
+}
+
+if ($_SESSION["role"] != 'student') {
+    header("Location: logout.php");
     exit();
 }
 
@@ -28,7 +33,7 @@ if ($user == null) {
 $name = htmlspecialchars($user->first_name . ' ' . $user->middle_name . ' ' . $user->last_name);
 
 // Get major info
-$student_majors = Major::getStudentMajors($user->id);
+$student_majors = $user->majors;
 
 // Get advisor name
 $advisor = User::findUserByNetId($user->advisor);

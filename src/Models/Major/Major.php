@@ -9,16 +9,22 @@ class Major {
     public $major_name;
     public $degree_type;
 
-    public static function getStudentMajors($net_id) {
-        $db = new Database();
-        $db = $db->db();
+//    public static function getStudentMajors($net_id): array {
+//        $db = new Database();
+//        $db = $db->db();
+//
+//        $major_arr = self::getStudentMajorsWithDb($db, $net_id);
+//        $db->close();
+//
+//        return $major_arr;
+//    }
 
+    public static function getStudentMajorsWithDb($db, $net_id): array {
         $q = "SELECT * FROM majors_in WHERE net_id = ?";
         $stmt = $db->prepare($q);
 
         if (!$stmt) {
-            $db->close();
-            return null;
+            return array();
         }
 
         $stmt->bind_param("s", $net_id);
@@ -27,8 +33,7 @@ class Major {
         $result = $stmt->get_result();
         if ($result->num_rows === 0) {
             $stmt->close();
-            $db->close();
-            return null;
+            return array();
         }
 
         $major_ids = array();
@@ -40,26 +45,19 @@ class Major {
 
         $major_arr = array();
         foreach ($major_ids as $major_id) {
-            $major = self::getMajorFromId($major_id);
+            $major = self::getMajorFromId($db, $major_id);
             if ($major != null) {
                 $major_arr[] = $major;
             }
         }
-
-        $db->close();
-
         return $major_arr;
     }
 
-    public static function getMajorFromId($major_id) {
-        $db = new Database();
-        $db = $db->db();
-
+    private static function getMajorFromId($db, $major_id) {
         $q = "SELECT * FROM majors WHERE major_id = ?";
         $stmt = $db->prepare($q);
 
         if (!$stmt) {
-            $db->close();
             return null;
         }
 
@@ -69,17 +67,14 @@ class Major {
         $result = $stmt->get_result();
         if ($result->num_rows === 0) {
             $stmt->close();
-            $db->close();
             return null;
         }
 
         $major = $result->fetch_assoc();
 
-        $stmt -> close();
-        $db->close();
+        $stmt->close();
 
         return $major != null ? new Major($major) : null;
-
     }
 
     public function __construct($majorDetails) {

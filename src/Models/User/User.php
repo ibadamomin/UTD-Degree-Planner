@@ -3,6 +3,7 @@
 namespace DegreePlanner\Models\User;
 
 use DegreePlanner\Database\Database;
+use DegreePlanner\Models\Major\Major;
 
 class User {
     public $id;
@@ -13,11 +14,21 @@ class User {
     public $last_name;
     public $role;
     public $advisor;
+    public $majors;
 
-    public static function findUserByNetId($net_id) {
+    public static function findUserByNetId($net_id): ?User {
         $db = new Database();
         $db = $db->db();
 
+        $user = self::findUserByIdWithDb($db, $net_id);
+
+        $db->close();
+
+        return $user;
+    }
+
+    /** Allow finding multiple users without closing DB each query */
+    public static function findUserByIdWithDb($db, $net_id): ?User {
         $q = "SELECT * FROM users WHERE net_id = ? LIMIT 1";
         $stmt = $db->prepare($q);
 
@@ -39,10 +50,13 @@ class User {
         $stmt->close();
 
         $userDetails = self::getRole($db, $userDetails);
-        $db->close();
+        if ($userDetails['role'] == 'student') {
+            $userDetails["majors"] = Major::getStudentMajorsWithDb($db, $net_id);
+        } else {
+            $userDetails["majors"] = array();
+        }
 
         return $userDetails != null ? new User($userDetails) : null;
-
     }
 
     private static function getRole($db, $userDetails) {
@@ -161,6 +175,7 @@ class User {
         $this->last_name = $userDetails['last_name'];
         $this->role = $userDetails['role'];
         $this->advisor = $userDetails['advisor_id'];
+        $this->majors = $userDetails["majors"];
     }
 
 }
