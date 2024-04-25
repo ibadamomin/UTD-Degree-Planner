@@ -34,35 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-
-
-<!-- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Login</title>
-</head>
-<body>
-<form id="login" action="login.php" method="POST">
-    <label for="net_id">Net ID: </label>
-    <input type="text" id="net_id" name="net_id" required>*<br>
-
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password" required>*<br>
-
-    <button type="submit" value="Submit">Submit</button>
-
-</form>
-<?php
-if (isset($_GET['error'])) {
-    echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
-}
-?>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
@@ -85,12 +60,6 @@ if (isset($_GET['error'])) {
                 <h1 class="welcome-back">Welcome back!</h1>
                 <div class="enter-your-utd">Enter your UTD Net ID and password</div>
             </div>
-            <!-- <div class="user-wrapper">
-              <div class="users">
-                <div class="student">Student</div>
-                <div class="student">Advisor</div>
-              </div>
-            </div> -->
             <div class="input-wrapper">
                 <input class="net-id" id="net_id" name="net_id" placeholder="Net ID" type="text" required/>
             </div>
@@ -101,12 +70,15 @@ if (isset($_GET['error'])) {
         <div class="button-wrapper">
             <button class="button" type="submit" value="submit"> Log in </button>
         </div>
+        <div style="color: red;">
+        <?php
+        if (isset($_GET['error'])) {
+            echo $_GET['error'];
+        }
+        ?>
+        </div>
     </form>
-    <?php
-    if (isset($_GET['error'])) {
-        echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
-    }
-    ?>
+
 </div>
 </body>
 </html>
