@@ -24,8 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: login.php?error=Invalid username or password");
         exit();
     }
-    var_dump($user);
+
     $_SESSION['user_id'] = htmlspecialchars($user->id);
+    $_SESSION['role'] = htmlspecialchars($user->role);
     header("Location: index.php");
     exit();
 
@@ -34,72 +35,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-<form id="login" action="login.php" method="POST">
-    <label for="net_id">Net ID: </label>
-    <input type="text" id="net_id" name="net_id" required>*<br>
-
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password" required>*<br>
-
-    <button type="submit" value="Submit">Submit</button>
-
-</form>
-<?php
-if (isset($_GET['error'])) {
-    echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
-}
-?>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
 
-    <link rel="stylesheet" href="../frontEnd/global.css" />
-    <link rel="stylesheet" href="../frontEnd/index.css" />
+    <link rel="stylesheet" href="./css/global.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
     />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Proxima Nova:wght@400&display=swap"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Proxima Nova:wght@400&display=swap"
     />
-  </head>
-  <body>
-    <div class="login-screen-dark">
-      <form class="frame-form" id="login" action="login.php" method="POST">
+</head>
+<body>
+<div class="login-screen-dark">
+    <form class="frame-form" id="login" action="login.php" method="POST">
         <div class="login-wrapper">
-          <div class="welcome-back-parent">
-            <h1 class="welcome-back">Welcome back!</h1>
-            <div class="enter-your-utd">Enter your UTD Net ID and password</div>
-          </div>
-          <!-- <div class="user-wrapper">
-            <div class="users">
-              <div class="student">Student</div>
-              <div class="student">Advisor</div>
+            <div class="welcome-back-parent">
+                <h1 class="welcome-back">Welcome back!</h1>
+                <div class="enter-your-utd">Enter your UTD Net ID and password</div>
             </div>
-          </div> -->
-          <div class="input-wrapper">
-            <input class="net-id" id="net_id" name="net_id" placeholder="Net ID" type="text" required/>
-          </div>
-          <div class="input-wrapper">
-            <input class="password" id="password" name="password" placeholder="Password" type="password" required/>
-          </div>
+            <!-- <div class="user-wrapper">
+              <div class="users">
+                <div class="student">Student</div>
+                <div class="student">Advisor</div>
+              </div>
+            </div> -->
+            <div class="input-wrapper">
+                <input class="net-id" id="net_id" name="net_id" placeholder="Net ID" type="text" required/>
+            </div>
+            <div class="input-wrapper">
+                <input class="password" id="password" name="password" placeholder="Password" type="password" required/>
+            </div>
         </div>
         <div class="button-wrapper">
-          <button class="button" type="submit" value="submit"> Log in </button>
+            <button class="button" type="submit" value="submit"> Log in</button>
+            <?php
+            if (isset($_GET['error'])) {
+                echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
+            }
+            ?>
         </div>
-      </form>
-    </div>
-  </body>
+    </form>
+</div>
+</body>
 </html>
