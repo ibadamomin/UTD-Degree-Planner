@@ -64,8 +64,8 @@ if (isset($_GET['error'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="../frontEnd/global.css" />
+    <link rel="stylesheet" href="../frontEnd/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
