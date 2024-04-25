@@ -43,6 +43,7 @@ if ($advisor != null) {
 <html lang="">
 <head>
     <title>Student Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
 
