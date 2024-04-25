@@ -63,7 +63,7 @@
 }
 
 .net-id {
-  width: 172px;
+  width: 100%;
   border: 0;
   outline: 0;
   font-family: var(--font-roboto);
@@ -112,7 +112,7 @@
 }
 
 .password {
-  width: 151px;
+  width: 100%;
   border: 0;
   outline: 0;
   font-family: var(--font-roboto);

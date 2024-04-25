@@ -100,6 +100,11 @@ if (isset($_GET['error'])) {
           <button class="button" type="submit" value="submit"> Log in </button>
         </div>
       </form>
+      <?php
+        if (isset($_GET['error'])) {
+            echo "<p style='color: red;'>" . $_GET['error'] . "</php>";
+        }
+      ?>
     </div>
   </body>
 </html>

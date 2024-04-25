@@ -44,42 +44,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Login</title>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../frontEnd/global.css" />
+    <link rel="stylesheet" href="../frontEnd/register.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Proxima Nova:wght@400&display=swap" />
 </head>
+
 <body>
-<form id="register" action="register.php" method="POST">
-    <label for="net_id">Net ID: </label>
-    <input type="text" id="net_id" name="net_id" required>*<br>
+    <div class="login-screen-dark">
+        <form class="frame-form" id="register" action="register.php" method="POST">
+            <div class="welcome-back-parent">
+                <h1 class="welcome-back">Get Started</h1>
+                <div class="enter-your-utd">* required</div>
+            </div>
 
-    <label for="email">Email: </label>
-    <input type="email" id="email" name="email" required>*<br>
+            <label class="label-text" for="net_id">Net ID</label>
+            <div class="input-wrapper">
+                <input class="input-text" type="text" id="net_id" name="net_id" placeholder="Net ID*" /><br />
+            </div>
 
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password" required>*<br>
+            <label class="label-text" for="email">Email: </label>
+            <div class="input-wrapper">
+                <input class="input-text" type="email" id="email" name="email" placeholder="Email*" required /><br />
+            </div>
 
-    <label for="first_name">First Name: </label>
-    <input type="text" id="first_name" name="first_name" required>*<br>
+            <label class="label-text" for="password">Password: </label>
+            <div class="input-wrapper">
+                <input class="input-text" type="password" id="password" name="password" placeholder="Password*" /><br />
+            </div>
 
-    <label for="middle_name">Middle Name: </label>
-    <input type="text" id="middle_name" name="middle_name"><br>
+            <label class="label-text" for="first_name">First Name: </label>
+            <div class="input-wrapper">
+                <input class="input-text" type="text" id="first_name" name="first_name" placeholder="First Name*" required /><br />
+            </div>
 
-    <label for="last_name">Last Name: </label>
-    <input type="text" id="last_name" name="last_name" required>*<br>
+            <label class="label-text" for="middle_name">Middle Name: </label>
+            <div class="input-wrapper">
+                <input class="input-text" type="text" id="middle_name" name="middle_name" placeholder="Middle Name" /><br />
+            </div>
 
-    <label for="role">Role: </label>
-    <select name="role" id="role" required>
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
-    </select>*<br>
+            <label class="label-text" for="last_name">Last Name: </label>
+            <div class="input-wrapper">
+                <input class="input-text" type="text" id="last_name" name="last_name" placeholder="Last Name*" required /><br />
+            </div>
 
-    <button type="submit" value="Submit">Submit</button>
-
-</form>
-<?php
-if (isset($_GET['error'])) {
-    echo "<p style='color: red;'>" . htmlspecialchars($_GET['error']) . "</php>";
-}
-?>
+            <label class="label-text" for="role">Role: </label>
+            <div class="role-wrapper">
+                <select class="select-role" name="role" id="role" required>
+                    <option value="" disabled selected>Role*</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                </select><br />
+            </div>
+            <div class="button-wrapper">
+                <button class="button" type="submit" value="Submit">Submit</button>
+            </div>
+        </form>
+        <?php
+            if (isset($_GET['error'])) {
+                echo "<p style='color: red;'>" . htmlspecialchars($_GET['error']) . "</php>";
+            }
+        ?>
+    </div>
 </body>
 </html>
