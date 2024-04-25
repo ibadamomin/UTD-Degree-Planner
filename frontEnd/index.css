@@ -71,7 +71,7 @@
   background-color: transparent;
   height: 25px;
   position: relative;
-  color: var(--color-dimgray-100);
+  color: white;
   text-align: left;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
   background-color: transparent;
   height: 24px;
   position: relative;
-  color: var(--color-dimgray-100);
+  color: white;
   text-align: left;
   display: flex;
   align-items: center;
