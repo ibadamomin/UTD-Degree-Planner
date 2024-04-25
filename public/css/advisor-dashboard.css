@@ -1,0 +1,407 @@
+.advisor-dashboard-child {
+  align-self: stretch;
+  height: 92px;
+  position: relative;
+  background-color: var(--color-seagreen);
+}
+.ecs-student-directory {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.biomedical-engineering1 {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+.e-c-s {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xs) 0 0;
+  box-sizing: border-box;
+  min-width: 227px;
+  max-width: 100%;
+}
+.computer-engineering {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 229px;
+  max-width: 100%;
+}
+.biomedical-engineering-inner,
+.e-c-s-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.e-c-s-parent {
+  width: 738px;
+  justify-content: flex-start;
+  gap: var(--gap-17xl);
+}
+.biomedical-engineering-inner {
+  align-self: stretch;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--color-seagreen);
+}
+.biomedical-engineering,
+.frame-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.biomedical-engineering {
+  flex: 1;
+  flex-direction: column;
+  gap: 62px;
+}
+.frame-child {
+  width: 340px;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-gainsboro);
+  height: 45px;
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  padding: var(--padding-5xs) var(--padding-3xs);
+  box-sizing: border-box;
+  font-family: var(--font-proxima-nova);
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+}
+.computer-science {
+  width: 353px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.computer-science-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent,
+.student-directory {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent {
+  width: 430px;
+  flex-direction: column;
+  gap: 71px;
+  min-width: 430px;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--color-seagreen);
+}
+.student-directory {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-17xl);
+}
+.frame-item {
+  height: 4px;
+  width: 339px;
+  position: relative;
+  max-width: 100%;
+}
+.vector-wrapper {
+  align-self: stretch;
+  height: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 22px 0 var(--padding-xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.electrical-engineering,
+.mechanical-engineering,
+.software-engineering {
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 265px;
+  max-width: 100%;
+}
+.electrical-engineering-parent {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-16xl);
+}
+.electrical-engineering-parent,
+.frame-container,
+.frame-div {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-div {
+  width: 1129px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 19px;
+}
+.frame-container {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-10xl);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--color-seagreen);
+}
+.computer-engineering1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.a,
+.tim-allen {
+  position: relative;
+}
+.a {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 35px;
+}
+.tim-allen {
+  font-size: var(--font-size-13xl);
+}
+.a-parent {
+  flex-direction: column;
+}
+.a-parent,
+.computer-engineering-parent,
+.frame-wrapper1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-wrapper1 {
+  flex-direction: row;
+  padding: 0 var(--padding-16xl);
+}
+.computer-engineering-parent {
+  flex-direction: column;
+  gap: 47px;
+  max-width: 100%;
+}
+.tim-zllen,
+.z {
+  position: relative;
+}
+.z {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 32px;
+}
+.tim-zllen {
+  font-size: var(--font-size-13xl);
+}
+.frame-wrapper2,
+.z-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-wrapper2 {
+  flex-direction: row;
+  padding: 0 var(--padding-16xl);
+}
+.frame-group {
+  flex: 1;
+  flex-direction: column;
+  gap: 98px;
+}
+.frame-group,
+.frame-wrapper,
+.student-directory-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-wrapper {
+  width: 1231px;
+  flex-direction: row;
+  padding: 0 var(--padding-12xs);
+  box-sizing: border-box;
+}
+.student-directory-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-10xs);
+}
+.advisor-dashboard,
+.advisor-dashboard-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.advisor-dashboard-inner {
+  width: 1417px;
+  flex-direction: row;
+  padding: 0 55px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-33xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.advisor-dashboard {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-dimgray-200);
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 0 1085px;
+  gap: 84px;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .frame-parent {
+    flex: 1;
+  }
+  .student-directory {
+    flex-wrap: wrap;
+  }
+  .advisor-dashboard-inner {
+    padding-left: var(--padding-8xl);
+    padding-right: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .ecs-student-directory {
+    font-size: var(--font-size-23xl);
+  }
+  .biomedical-engineering1,
+  .computer-engineering {
+    font-size: var(--font-size-7xl);
+  }
+  .biomedical-engineering {
+    gap: 31px 62px;
+  }
+  .computer-science,
+  .electrical-engineering,
+  .mechanical-engineering,
+  .software-engineering {
+    font-size: var(--font-size-7xl);
+  }
+  .a,
+  .computer-engineering1 {
+    font-size: var(--font-size-23xl);
+  }
+  .tim-allen {
+    font-size: var(--font-size-7xl);
+  }
+  .z {
+    font-size: var(--font-size-23xl);
+  }
+  .tim-zllen {
+    font-size: var(--font-size-7xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .e-c-s-parent {
+    flex-wrap: wrap;
+    gap: 36px 18px;
+  }
+  .biomedical-engineering,
+  .frame-parent {
+    min-width: 100%;
+  }
+  .student-directory {
+    gap: 36px 18px;
+  }
+  .electrical-engineering-parent {
+    gap: 17px;
+  }
+  .computer-engineering-parent {
+    gap: 23px 47px;
+  }
+  .frame-group {
+    gap: 49px 98px;
+  }
+  .advisor-dashboard {
+    gap: 42px 84px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ecs-student-directory {
+    font-size: var(--font-size-12xl);
+  }
+  .biomedical-engineering1,
+  .computer-engineering {
+    font-size: var(--font-size-lgi);
+  }
+  .biomedical-engineering {
+    gap: 15px 62px;
+  }
+  .computer-science {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-parent {
+    gap: 35px 71px;
+  }
+  .electrical-engineering,
+  .mechanical-engineering,
+  .software-engineering {
+    font-size: var(--font-size-lgi);
+  }
+  .a,
+  .computer-engineering1 {
+    font-size: var(--font-size-12xl);
+  }
+  .tim-allen {
+    font-size: var(--font-size-lgi);
+  }
+  .z {
+    font-size: var(--font-size-12xl);
+  }
+  .tim-zllen {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-group {
+    gap: 24px 98px;
+  }
+  .advisor-dashboard {
+    gap: 21px 84px;
+  }
+}
