@@ -1,4 +1,4 @@
-Course ID,Course Prefix,Course Number,Course Name,Type,Credits
+course_id,course_prefix,course_number,course_name,course_type,credits
 1,RHET,1302,Rhetoric,Core,3
 2,ECS,3390,Professional and Technical Communication,Core,3
 3,MATH,2417,Calculus I,Core,3
