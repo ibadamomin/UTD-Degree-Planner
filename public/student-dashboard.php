@@ -73,7 +73,6 @@ foreach ($selectionAvailable as $key=>$area) {
         $remainingSelection[$key] = $insideArray;
     }
 }
-var_dump($remainingSelection);
 
 ?>
 

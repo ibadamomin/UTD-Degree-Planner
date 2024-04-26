@@ -5,3 +5,4 @@ DigiCertGlobalRootCA.crt.pem
 package.xml
 # Save space by ignoring vendor/
 vendor/
+a6/
