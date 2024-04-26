@@ -149,6 +149,15 @@ class User {
         $stmt->execute();
 
         $stmt->close();
+
+        // Todo() make this dynamic, add error handling, transactions
+        $q = "INSERT INTO majors_in VALUES (?, 1)";
+        $stmt = $db->prepare($q);
+        $stmt->bind_param("s", $net_id);
+        $stmt->execute();
+        $stmt->close();
+
+
         $db->close();
 
         return true;
