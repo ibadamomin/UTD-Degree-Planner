@@ -100,8 +100,8 @@ foreach ($selectionAvailable as $key=>$area) {
 
 <div class="student-dashboard">
     <div class="student-dashboard-header">
+        <a href="../frontEnd/student-planner.html">Student Planner</a>
         <a href="logout.php">Logout</a>
-
     </div>
     <main class="student-dashboard-inner">
         <section class="dashboard-section">
