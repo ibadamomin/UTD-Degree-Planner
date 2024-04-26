@@ -54,7 +54,7 @@ $json = json_decode($str, true);
 // Filter out taken courses
 $majorCourses = Course::filterOutTakenCourses($takenCourses, $json['Major']);
 $coreCourses = Course::filterOutTakenCourses($takenCourses, $json['Core']);
-$languageStr = "Language, Philosophy, and Culture";
+
 $selectionAvailable = $json['SelectionNeeded'];
 $remainingSelection = array();
 foreach ($selectionAvailable as $key=>$area) {
