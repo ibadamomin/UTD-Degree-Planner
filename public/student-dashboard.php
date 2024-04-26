@@ -265,8 +265,48 @@ if ($advisor != null) {
                     </div>
                     <div class="frame-wrapper8">
                         <div class="core-curriculum-group">
-                            <div class="core-curriculum1">Core Curriculum</div>
-                            <div class="major-requirements1">Major Requirements</div>
+                        <div class="core-curriculum1">Core Curriculum</div>
+                    <p style="font-size: 24px;">
+                      RHET 1302 - Rhetoric<br>
+                      ECS 3390 - Professional and Technical Communication<br>
+                      MATH 2417 - Calculus I<br>
+                      PHYS 2325 - Mechanics<br>
+                      PHYS 2326 - Electromagnetism and Waves<br>
+                      GOVT 2305 - American National Government<br>
+                      GOVT 2306 - State and Local Government<br>
+                      MATH 2419 - Calculus II<br>
+                      PHYS 2125 - Physics Laboratary I<br>
+                    </p>
+                  <div class="major-requirements1">Major Requirements</div>
+                    <p style="font-size: 24px;">
+                      ECS 1100 - Introduction to Engineering and Computer Science<br>
+                      CS 1200 - Introduction to Computer Science and Software Engineering<br>
+                      CS 1136 - Computer Science Laboratory<br>
+                      CS 1336 - Programming Fundamentals<br>
+                      CS 1337 - Computer Science I<br>
+                      CS 2305 - Discrete Mathematics for Computing I<br>
+                      CS 2336 - Computer Science II<br>
+                      CS 2340 - Computer Architecture<br>
+                      MATH 2418 - Linear Algebra<br>
+                      PHYS 2126 - Physics Laboratory II<br>
+                      CS 3162 - Professional Responsibility in Computer Science and Software Engineering<br>
+                      CS 3305 - Discrete Mathematics for Computing II<br>
+                      CS 3341 - Probability and Statistics in Computer Science and Software Engineering<br>
+                      CS 3345 - Data Structures and Introduction to Algorithmic Analysis<br>
+                      CS 3354 - Software Engineering<br>
+                      CS 3377 - Systems Programming in UNIX and Other Environments<br>
+                      CS 3390 - Professional and Technical Communication<br>
+                      CS 4141 - Digital Systems Laboratory<br>
+                      CS 4337 - Programming Language Paradigms<br>
+                      CS 4341 - Digital Logic and Computer Design<br>
+                      CS 4347 - Database Systems<br>
+                      CS 4348 - Operating Systems Concepts<br>
+                      CS 4349 - Advanced Algorithm Design and Analysis<br>
+                      CS 4384 - Automata Theory<br>
+                      CS 4485 - Computer Science Project<br>
+                      CS 4352 - Human-Computer Interaction I<br>
+                      CS 4353 - Human-Computer Interaction II<br>
+                    </p>
                             <div class="free-electives1">Free Electives</div>
                         </div>
                     </div>
