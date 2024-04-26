@@ -3,7 +3,6 @@
 namespace DegreePlanner\Models\User;
 
 use DegreePlanner\Database\Database;
-use DegreePlanner\Models\Major\Major;
 
 class User {
     public $id;
@@ -13,8 +12,7 @@ class User {
     public $middleName;
     public $lastName;
     public $role;
-    public $advisor;
-    public $majors;
+
 
     public static function findUserByNetId($net_id): ?User {
         $db = new Database();
@@ -29,11 +27,18 @@ class User {
 
     /** Allow finding multiple users without closing DB each query */
     public static function findUserByIdWithDb($db, $net_id): ?User {
-        $q = "SELECT * FROM users WHERE net_id = ? LIMIT 1";
+        $user = self::tryRetrieveStudent($db, $net_id);
+        if ($user == null) {
+            $user = self::tryRetrieveAdvisor($db, $net_id);
+        }
+        return $user;
+    }
+
+    public static function tryRetrieveStudent($db, $net_id): ?Student {
+        $q = "SELECT * FROM users NATURAL JOIN students NATURAL JOIN majors_in NATURAL JOIN majors WHERE net_id = ?";
         $stmt = $db->prepare($q);
 
         if (!$stmt) {
-            $db->close();
             return null;
         }
 
@@ -43,50 +48,23 @@ class User {
         $result = $stmt->get_result();
         if ($result->num_rows === 0) {
             $stmt->close();
-            $db->close();
             return null;
         }
+
+        // Fetch first row of records. Due to join many records with the same student may return with different majors.
         $userDetails = $result->fetch_assoc();
+        $student = new Student($userDetails);
+        while ($record = $result->fetch_assoc()) {
+            if ($record['net_id'] === $student->id) {
+                $student->addMajor($record);
+            }
+        }
         $stmt->close();
-
-        $userDetails = self::getRole($db, $userDetails);
-        if ($userDetails['role'] == 'student') {
-            $userDetails["majors"] = Major::getStudentMajorsWithDb($db, $net_id);
-        } else {
-            $userDetails["majors"] = array();
-        }
-
-        return $userDetails != null ? new User($userDetails) : null;
+        return $student;
     }
 
-    private static function getRole($db, $userDetails) {
-        $net_id = $userDetails['net_id'];
-        if ($net_id == null) {
-            return null;
-        }
-
-        // Check if they're a student
-        $role = self::getUserRole($db, $net_id, 'students');
-        if ($role) {
-            $userDetails['role'] = 'student';
-            $userDetails['advisor_id'] = $role['advisor_id'];
-            return $userDetails;
-        }
-
-        // Check if they're faculty
-        $role = self::getUserRole($db, $net_id, 'faculty');
-        if ($role) {
-            $userDetails['role'] = 'faculty';
-            $userDetails['advisor_id'] = null;
-            return $userDetails;
-        }
-
-        return null;
-
-    }
-
-    private static function getUserRole($db, $net_id, $tableName) {
-        $q = "SELECT * FROM $tableName WHERE net_id = ? LIMIT 1";
+    public static function tryRetrieveAdvisor($db, $net_id): ?Advisor {
+        $q = "SELECT * FROM faculty NATURAL JOIN users WHERE net_id= ?";
         $stmt = $db->prepare($q);
 
         if (!$stmt) {
@@ -97,7 +75,17 @@ class User {
         $stmt->execute();
 
         $result = $stmt->get_result();
-        return $result->num_rows > 0 ? $result->fetch_assoc() : null;
+        if ($result->num_rows === 0) {
+            $stmt->close();
+            return null;
+        }
+
+        $advisorDetails = $result->fetch_assoc();
+        if ($advisorDetails == null) {
+            return null;
+        }
+        $stmt->close();
+        return new Advisor($advisorDetails);
 
     }
 
@@ -136,9 +124,9 @@ class User {
             $stmt->execute();
         } catch (\mysqli_sql_exception $e) {
             $error = $e->getMessage();
-            if (strpos($error, 'Duplicate entry') !== false && strpos($error, 'users.PRIMARY') !== false) {
+            if (str_contains($error, 'Duplicate entry') && str_contains($error, 'users.PRIMARY')) {
                 $msg = "This Net ID is already registered!";
-            } elseif (strpos($error, 'Duplicate entry') !== false && strpos($error, 'users.uc_email') !== false) {
+            } elseif (str_contains($error, 'Duplicate entry') && str_contains($error, 'users.uc_email')) {
                 $msg = "This email is already in use!";
             } else {
                 $msg = "Could not complete registration!";
@@ -166,12 +154,12 @@ class User {
         return true;
     }
 
-    public function hasMajor($major) {
-        return in_array($major, $this->majors);
+    public function getFullName(): string {
+        return $this->firstName . ' ' . $this->middleName . ' ' . $this->lastName;
     }
 
-    public function getFullName() {
-        return $this->firstName . ' ' . $this->middleName . ' ' . $this->lastName;
+    public function getFirstLast(): string {
+        return $this->firstName . ' ' . $this->lastName;
     }
 
     public function __construct($userDetails) {
@@ -181,9 +169,6 @@ class User {
         $this->firstName = $userDetails['first_name'];
         $this->middleName = $userDetails['middle_name'];
         $this->lastName = $userDetails['last_name'];
-        $this->role = $userDetails['role'];
-        $this->advisor = $userDetails['advisor_id'];
-        $this->majors = $userDetails["majors"];
     }
 
 }

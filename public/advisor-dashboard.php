@@ -6,17 +6,6 @@ use DegreePlanner\Models\User\User;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$advisor = Advisor::findUserByNetId('pqr456');
-$student_users = Advisor::getStudents($advisor->id);
-
-$advisor_majors = array();
-foreach ($student_users as $student) {
-    foreach ($student->majors as $major) {
-        if (!in_array($major, $advisor_majors)) {
-            $advisor_majors[] = $major;
-        }
-    }
-}
 
 session_start();
 
@@ -38,10 +27,21 @@ if ($_SESSION["role"] != 'faculty') {
     exit();
 }
 
-$user = User::findUserByNetId($_SESSION["user_id"]);
-$student_users = Advisor::getStudents($user->id);
+$advisor = User::findUserByNetId($_SESSION["user_id"]);
+if (!($advisor instanceof Advisor)) {
+    header("Location: logout.php");
+    exit();
+}
+$student_users = $advisor->getStudents();
 
-
+$advisor_majors = array();
+foreach ($student_users as $student) {
+    foreach ($student->majors as $major) {
+        if (!in_array($major, $advisor_majors)) {
+            $advisor_majors[] = $major;
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +64,9 @@ $student_users = Advisor::getStudents($user->id);
 </head>
 <body>
 <div class="advisor-dashboard">
-    <section class="advisor-dashboard-child"></section>
+    <section class="advisor-dashboard-child">
+        <a href="logout.php">Logout</a>
+    </section>
     <section class="advisor-dashboard-inner">
         <div class="student-directory-parent">
             <div class="student-directory">

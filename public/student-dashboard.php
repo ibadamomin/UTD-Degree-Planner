@@ -1,6 +1,6 @@
 <?php
 
-use DegreePlanner\Models\Major\Major;
+use DegreePlanner\Models\User\Student;
 use DegreePlanner\Models\User\User;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -26,7 +26,7 @@ if ($_SESSION["role"] != 'student') {
 
 // Find user info
 $user = User::findUserByNetId($_SESSION['user_id']);
-if ($user == null) {
+if (!($user instanceof Student)) {
     header("Location: login.php");
     exit();
 }
@@ -38,7 +38,7 @@ $student_majors = $user->majors;
 // Get advisor name
 $advisor = User::findUserByNetId($user->advisor);
 if ($advisor != null) {
-    $advisor = htmlspecialchars($advisor->getFullName());
+    $advisor = htmlspecialchars($advisor->getFirstLast());
 }
 
 ?>
