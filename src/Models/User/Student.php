@@ -36,7 +36,7 @@ class Student extends User {
         return in_array($major, $this->majors);
     }
 
-    public function getCompletedAndCurrentCourses() {
+    public function getTakenCourses() {
         $db = new Database();
         $db = $db->db();
 

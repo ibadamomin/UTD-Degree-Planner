@@ -3,298 +3,303 @@
   "Major": [
     {
       "course_prefix": "ECS",
-      "course_no": "1100",
+      "course_no": 1100,
       "course_name": "Introduction to Engineering and Computer Science"
     },
     {
       "course_prefix": "CS",
-      "course_no": "1200",
+      "course_no": 1200,
       "course_name": "Introduction to Computer Science and Software Engineering"
     },
     {
       "course_prefix": "CS",
-      "course_no": "1436",
+      "course_no": 1436,
       "course_name": "Programming Fundamentals"
     },
     {
       "course_prefix": "CS",
-      "course_no": "1337",
+      "course_no": 1337,
       "course_name": "Computer Science I"
     },
     {
       "course_prefix": "CS",
-      "course_no": "2305",
+      "course_no": 2305,
       "course_name": "Discrete Mathematics for Computing I"
     },
     {
       "course_prefix": "CS",
-      "course_no": "2336",
+      "course_no": 2336,
       "course_name": "Computer Science II"
     },
     {
       "course_prefix": "CS",
-      "course_no": "2340",
+      "course_no": 2340,
       "course_name": "Computer Architecture"
     },
     {
       "course_prefix": "MATH",
-      "course_no": "2418",
+      "course_no": 2417,
+      "course_name": "Calculus I"
+    },
+    {
+      "course_prefix": "MATH",
+      "course_no": 2419,
+      "course_name": "Calculus II"
+    },
+    {
+      "course_prefix": "MATH",
+      "course_no": 2418,
       "course_name": "Linear Algebra"
     },
     {
       "course_prefix": "RHET",
-      "course_no": "1302",
+      "course_no": 1302,
       "course_name": "Rhetoric"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2125",
+      "course_no": 2125,
       "course_name": "Physics Laboratory I"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2126",
+      "course_no": 2126,
       "course_name": "Physics Laboratory II"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2325",
+      "course_no": 2325,
       "course_name": "Mechanics"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2326",
+      "course_no": 2326,
       "course_name": "Electromagnetism and Waves"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3162",
+      "course_no": 3162,
       "course_name": "Professional Responsibility in Computer Science and Software Engineering"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3305",
+      "course_no": 3305,
       "course_name": "Discrete Mathematics for Computing II"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3341",
+      "course_no": 3341,
       "course_name": "Probability and Statistics in Computer Science and Software Engineering"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3345",
+      "course_no": 3345,
       "course_name": "Data Structures and Introduction to Algorithmic Analysis"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3354",
+      "course_no": 3354,
       "course_name": "Software Engineering"
     },
     {
       "course_prefix": "CS",
-      "course_no": "3377",
+      "course_no": 3377,
       "course_name": "Systems Programming in UNIX and Other Environments"
     },
     {
       "course_prefix": "ECS",
-      "course_no": "3390",
+      "course_no": 3390,
       "course_name": "Professional and Technical Communication"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4141",
+      "course_no": 4141,
       "course_name": "Digital Systems Laboratory"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4337",
+      "course_no": 4337,
       "course_name": "Programming Language Paradigms"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4341",
+      "course_no": 4341,
       "course_name": "Digital Logic and Computer Design"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4347",
+      "course_no": 4347,
       "course_name": "Database Systems"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4348",
+      "course_no": 4348,
       "course_name": "Operating Systems Concepts"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4349",
+      "course_no": 4349,
       "course_name": "Advanced Algorithm Design and Analysis"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4384",
+      "course_no": 4384,
       "course_name": "Automata Theory"
     },
     {
       "course_prefix": "CS",
-      "course_no": "4485",
+      "course_no": 4485,
       "course_name": "Computer Science Project"
     }
   ],
   "Core": [
+
     {
       "course_prefix": "RHET",
-      "course_no": "1302",
+      "course_no": 1302,
       "course_name": "Rhetoric"
     },
     {
       "course_prefix": "ECS",
-      "course_no": "3390",
+      "course_no": 3390,
       "course_name": "Professional and Technical Communication"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2325",
+      "course_no": 2325,
       "course_name": "Mechanics"
     },
     {
       "course_prefix": "PHYS",
-      "course_no": "2326",
+      "course_no": 2326,
       "course_name": "Electromagnetism and Waves"
     },
     {
       "course_prefix": "GOVT",
-      "course_no": "2305",
+      "course_no": 2305,
       "course_name": "American National Government"
     },
     {
       "course_prefix": "GOVT",
-      "course_no": "2306",
+      "course_no": 2306,
       "course_name": "State and Local Government"
     }
   ],
   "SelectionNeeded": {
-    "Math": {
-      "Hours": 6,
-      "Area": "Major Requirements",
-      "Options": [
-        {
-          "course_prefix": "AMS",
-          "course_no": "2300",
-          "course_name": "American Popular Culture"
-        },
-        {
-          "course_prefix": "AMS",
-          "course_no": "2341",
-          "course_name": "American Studies for the Twenty-First Century"
-        },
-        {
-          "course_prefix": "ATCM",
-          "course_no": "2300",
-          "course_name": "Introduction to TechnoCulture"
-        },
-        {
-          "course_prefix": "ATCM",
-          "course_no": "2322",
-          "course_name": "Media Histories"
-        },
-        {
-          "course_prefix": "ATCM",
-          "course_no": "2325",
-          "course_name": "Introduction to Ethnic Studies"
-        },
-        {
-          "course_prefix": "FILM",
-          "course_no": "1303",
-          "course_name": "Transnational Film and Video"
-        },
-        {
-          "course_prefix": "HIST",
-          "course_no": "2340",
-          "course_name": "Middle East Civilizations"
-        },
-        {
-          "course_prefix": "HIST",
-          "course_no": "2341",
-          "course_name": "East Asian Civilizations"
-        },
-        {
-          "course_prefix": "HIST",
-          "course_no": "2350",
-          "course_name": "Latin American Civilizations"
-        },
-        {
-          "course_prefix": "HIST",
-          "course_no": "2360",
-          "course_name": "European Civilizations"
-        },
-        {
-          "course_prefix": "HIST",
-          "course_no": "2370",
-          "course_name": "The Holocaust"
-        },
-        {
-          "course_prefix": "HUMA",
-          "course_no": "1301",
-          "course_name": "Exploration of the Humanities"
-        },
-        {
-          "course_prefix": "LIT",
-          "course_no": "1301",
-          "course_name": "Introduction to Literature"
-        },
-        {
-          "course_prefix": "LIT",
-          "course_no": "2322",
-          "course_name": "Survey of African-American and African Diaspora Literatures"
-        },
-        {
-          "course_prefix": "LIT",
-          "course_no": "2329",
-          "course_name": "Introduction to Ethnic American Literature"
-        },
-        {
-          "course_prefix": "LIT",
-          "course_no": "2331",
-          "course_name": "Introduction to World Literature"
-        },
-        {
-          "course_prefix": "PHIL",
-          "course_no": "1301",
-          "course_name": "Introduction to Philosophy"
-        },
-        {
-          "course_prefix": "PHIL",
-          "course_no": "1305",
-          "course_name": "Introduction to Philosophy of Religion"
-        },
-        {
-          "course_prefix": "PHIL",
-          "course_no": "1306",
-          "course_name": "Introduction to Ethics"
-        },
-        {
-          "course_prefix": "PHIL",
-          "course_no": "2316",
-          "course_name": "History of Philosophy I"
-        },
-        {
-          "course_prefix": "PHIL",
-          "course_no": "2317",
-          "course_name": "History of Philosophy II"
-        },
-        {
-          "course_prefix": "RELS",
-          "course_no": "1325",
-          "course_name": "Introduction to Philosophy of Religion"
-        }
-      ]
-    },
     "Language, Philosophy, and Culture": {
       "Hours": 3,
       "Area": "Core",
       "Options": [
+        {
+          "course_prefix": "AMS",
+          "course_no": 2300,
+          "course_name": "American Popular Culture"
+        },
+        {
+          "course_prefix": "AMS",
+          "course_no": 2341,
+          "course_name": "American Studies for the Twenty-First Century"
+        },
+        {
+          "course_prefix": "ATCM",
+          "course_no": 2300,
+          "course_name": "Introduction to TechnoCulture"
+        },
+        {
+          "course_prefix": "ATCM",
+          "course_no": 2322,
+          "course_name": "Media Histories"
+        },
+        {
+          "course_prefix": "ATCM",
+          "course_no": 2325,
+          "course_name": "Introduction to Ethnic Studies"
+        },
+        {
+          "course_prefix": "FILM",
+          "course_no": 1303,
+          "course_name": "Transnational Film and Video"
+        },
+        {
+          "course_prefix": "HIST",
+          "course_no": 2340,
+          "course_name": "Middle East Civilizations"
+        },
+        {
+          "course_prefix": "HIST",
+          "course_no": 2341,
+          "course_name": "East Asian Civilizations"
+        },
+        {
+          "course_prefix": "HIST",
+          "course_no": 2350,
+          "course_name": "Latin American Civilizations"
+        },
+        {
+          "course_prefix": "HIST",
+          "course_no": 2360,
+          "course_name": "European Civilizations"
+        },
+        {
+          "course_prefix": "HIST",
+          "course_no": 2370,
+          "course_name": "The Holocaust"
+        },
+        {
+          "course_prefix": "HUMA",
+          "course_no": 1301,
+          "course_name": "Exploration of the Humanities"
+        },
+        {
+          "course_prefix": "LIT",
+          "course_no": 1301,
+          "course_name": "Introduction to Literature"
+        },
+        {
+          "course_prefix": "LIT",
+          "course_no": 2322,
+          "course_name": "Survey of African-American and African Diaspora Literatures"
+        },
+        {
+          "course_prefix": "LIT",
+          "course_no": 2329,
+          "course_name": "Introduction to Ethnic American Literature"
+        },
+        {
+          "course_prefix": "LIT",
+          "course_no": 2331,
+          "course_name": "Introduction to World Literature"
+        },
+        {
+          "course_prefix": "PHIL",
+          "course_no": 1301,
+          "course_name": "Introduction to Philosophy"
+        },
+        {
+          "course_prefix": "PHIL",
+          "course_no": 1305,
+          "course_name": "Introduction to Philosophy of Religion"
+        },
+        {
+          "course_prefix": "PHIL",
+          "course_no": 1306,
+          "course_name": "Introduction to Ethics"
+        },
+        {
+          "course_prefix": "PHIL",
+          "course_no": 2316,
+          "course_name": "History of Philosophy I"
+        },
+        {
+          "course_prefix": "PHIL",
+          "course_no": 2317,
+          "course_name": "History of Philosophy II"
+        },
+        {
+          "course_prefix": "RELS",
+          "course_no": 1325,
+          "course_name": "Introduction to Philosophy of Religion"
+        }
       ]
     },
     "Creative Arts": {
@@ -303,72 +308,72 @@
       "Options": [
         {
           "course_prefix": "AHST",
-          "course_no": "1303",
+          "course_no": 1303,
           "course_name": "Survey of Western Art History: Ancient to Medieval"
         },
         {
           "course_prefix": "AHST",
-          "course_no": "1304",
+          "course_no": 1304,
           "course_name": "Survey of Western Art History: Renaissance to Modern"
         },
         {
           "course_prefix": "AHST",
-          "course_no": "2331",
+          "course_no": 2331,
           "course_name": "Understanding Art"
         },
         {
           "course_prefix": "ARTS",
-          "course_no": "1301",
+          "course_no": 1301,
           "course_name": "Exploration of the Arts"
         },
         {
           "course_prefix": "ATCM",
-          "course_no": "2321",
+          "course_no": 2321,
           "course_name": "Reading Media Critically"
         },
         {
           "course_prefix": "CRWT",
-          "course_no": "2301",
+          "course_no": 2301,
           "course_name": "Introduction to Creative Writing"
         },
         {
           "course_prefix": "DANC",
-          "course_no": "1305",
+          "course_no": 1305,
           "course_name": "Introduction to World Dance Forms"
         },
         {
           "course_prefix": "DANC",
-          "course_no": "1310",
+          "course_no": 1310,
           "course_name": "Understanding Dance"
         },
         {
           "course_prefix": "FILM",
-          "course_no": "2332",
+          "course_no": 2332,
           "course_name": "Understanding Film"
         },
         {
           "course_prefix": "MUSI",
-          "course_no": "1306",
+          "course_no": 1306,
           "course_name": "Understanding Music"
         },
         {
           "course_prefix": "MUSI",
-          "course_no": "2321",
+          "course_no": 2321,
           "course_name": "Music Cultures of the World"
         },
         {
           "course_prefix": "MUSI",
-          "course_no": "2322",
+          "course_no": 2322,
           "course_name": "Music in Western Civilization"
         },
         {
           "course_prefix": "PHIL",
-          "course_no": "1307",
+          "course_no": 1307,
           "course_name": "Introduction to Philosophy of Art"
         },
         {
           "course_prefix": "THEA",
-          "course_no": "1310",
+          "course_no": 1310,
           "course_name": "Understanding Theatre"
         }
       ]
@@ -379,32 +384,32 @@
       "Options":  [
         {
           "course_prefix": "HIST",
-          "course_no": "1301",
+          "course_no": 1301,
           "course_name": "U.S. History Survey to Civil War"
         },
         {
           "course_prefix": "HIST",
-          "course_no": "1302",
+          "course_no": 1302,
           "course_name": "U.S. History Survey from Civil War"
         },
         {
           "course_prefix": "HIST",
-          "course_no": "2301",
+          "course_no": 2301,
           "course_name": "History of Texas"
         },
         {
           "course_prefix": "HIST",
-          "course_no": "2330",
+          "course_no": 2330,
           "course_name": "Themes and Ideas in American History"
         },
         {
           "course_prefix": "HIST",
-          "course_no": "2381",
+          "course_no": 2381,
           "course_name": "African-American History"
         },
         {
           "course_prefix": "HIST",
-          "course_no": "2384",
+          "course_no": 2384,
           "course_name": "U.S. Women from Settlement to Present"
         }
       ]
@@ -417,77 +422,77 @@
           "Options": [
             {
               "course_prefix": "BA",
-              "course_no": "1310",
+              "course_no": 1310,
               "course_name": "Making Choices in Free Market Systems"
             },
             {
               "course_prefix": "BA",
-              "course_no": "1320",
+              "course_no": 1320,
               "course_name": "Business in a Global World"
             },
             {
               "course_prefix": "CLDP",
-              "course_no": "2314",
+              "course_no": 2314,
               "course_name": "Lifespan Development"
             },
             {
               "course_prefix": "CRIM",
-              "course_no": "1301",
+              "course_no": 1301,
               "course_name": "Introduction to Criminal Justice"
             },
             {
               "course_prefix": "CRIM",
-              "course_no": "1307",
+              "course_no": 1307,
               "course_name": "Introduction to Crime and Criminology"
             },
             {
               "course_prefix": "ECON",
-              "course_no": "2301",
+              "course_no": 2301,
               "course_name": "Principles of Macroeconomics"
             },
             {
               "course_prefix": "ECON",
-              "course_no": "2302",
+              "course_no": 2302,
               "course_name": "Principles of Microeconomics"
             },
             {
               "course_prefix": "GEOG",
-              "course_no": "2303",
+              "course_no": 2303,
               "course_name": "World Regional Geography"
             },
             {
               "course_prefix": "GST",
-              "course_no": "2300",
+              "course_no": 2300,
               "course_name": "Introduction to Gender Studies"
             },
             {
               "course_prefix": "PA",
-              "course_no": "2325",
+              "course_no": 2325,
               "course_name": "Introduction to Public and Nonprofit Management"
             },
             {
               "course_prefix": "PSY",
-              "course_no": "2301",
+              "course_no": 2301,
               "course_name": "Introduction to Psychology"
             },
             {
               "course_prefix": "PSY",
-              "course_no": "2314",
+              "course_no": 2314,
               "course_name": "Lifespan Development"
             },
             {
               "course_prefix": "SOC",
-              "course_no": "1301",
+              "course_no": 1301,
               "course_name": "Introduction to Sociology"
             },
             {
               "course_prefix": "SOC",
-              "course_no": "1306",
+              "course_no": 1306,
               "course_name": "Contemporary Social Issues"
             },
             {
               "course_prefix": "SOC",
-              "course_no": "2300",
+              "course_no": 2300,
               "course_name": "Introduction to Gender Studies"
             }
           ]

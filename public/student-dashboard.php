@@ -1,5 +1,6 @@
 <?php
 
+use DegreePlanner\Models\Course\Course;
 use DegreePlanner\Models\User\Student;
 use DegreePlanner\Models\User\User;
 
@@ -43,7 +44,28 @@ if ($advisor != null) {
 
 
 // Get completed courses
-$completedCurrentCourses = $user->getCompletedAndCurrentCourses();
+$takenCourses = $user->getTakenCourses();
+
+// Get total courses
+$str = file_get_contents('../src/DegreeRequirements/bs_computer_science.json');
+$json = json_decode($str, true);
+
+
+// Filter out taken courses
+$majorCourses = Course::filterOutTakenCourses($takenCourses, $json['Major']);
+$coreCourses = Course::filterOutTakenCourses($takenCourses, $json['Core']);
+$languageStr = "Language, Philosophy, and Culture";
+$selectionAvailable = $json['SelectionNeeded'];
+$remainingSelection = array();
+foreach ($selectionAvailable as $key=>$area) {
+    $hoursNeeded = $area['Hours'];
+    $options = $area['Options'];
+    $startingLen = sizeof($area['Options']);
+    $options = Course::filterOutTakenCourses($takenCourses, $options);
+    if ($startingLen - sizeof($options) != $hoursNeeded / 3) {
+        $remainingSelection[$key] = $options;
+    }
+}
 
 ?>
 

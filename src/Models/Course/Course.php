@@ -23,7 +23,18 @@ class Course {
         $this->courseName = $courseDetails["course_name"];
         $this->semester = $courseDetails["semester"];
         $this->courseYear = $courseDetails["course_year"];
+    }
 
-
+    public static function filterOutTakenCourses($takenCourses, $allCourses) {
+        foreach ($takenCourses as $completedCourse) {
+            foreach ($allCourses as $key => $course) {
+                if ($completedCourse->coursePrefix === $course['course_prefix'] &&
+                    $completedCourse->courseNo === $course['course_no']) {
+                    unset($allCourses[$key]);
+                    break;
+                }
+            }
+        }
+        return $allCourses;
     }
 }
