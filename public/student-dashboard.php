@@ -62,10 +62,18 @@ foreach ($selectionAvailable as $key=>$area) {
     $options = $area['Options'];
     $startingLen = sizeof($area['Options']);
     $options = Course::filterOutTakenCourses($takenCourses, $options);
-    if ($startingLen - sizeof($options) != $hoursNeeded / 3) {
-        $remainingSelection[$key] = $options;
+    $diff =$startingLen - sizeof($options);
+    if ($diff != $hoursNeeded / 3) {
+        $insideArray = array(
+                "Hours" => $hoursNeeded - ($diff * 3),
+                "Area" => $area["Area"],
+                "Options" => $options
+        );
+
+        $remainingSelection[$key] = $insideArray;
     }
 }
+var_dump($remainingSelection);
 
 ?>
 
