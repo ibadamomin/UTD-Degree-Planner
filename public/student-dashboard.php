@@ -44,7 +44,6 @@ if ($advisor != null) {
 
 // Get completed courses
 $completedCurrentCourses = $user->getCompletedAndCurrentCourses();
-var_dump($completedCurrentCourses);
 
 ?>
 
