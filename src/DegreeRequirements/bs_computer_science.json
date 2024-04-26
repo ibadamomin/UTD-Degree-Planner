@@ -1,0 +1,138 @@
+{
+  "Minimum Hours": 124,
+  "Major": [
+    "ECS 1100 Introduction to Engineering and Computer Science",
+    "CS 1200 Introduction to Computer Science and Software Engineering",
+    "CS 1436 Programming Fundamentals",
+    "CS 1337 Computer Science I",
+    "CS 2305 Discrete Mathematics for Computing I",
+    "CS 2336 Computer Science II",
+    "CS 2340 Computer Architecture",
+    "MATH 2418 Linear Algebra",
+    "RHET 1302 Rhetoric",
+    "PHYS 2125 Physics Laboratory I",
+    "PHYS 2126 Physics Laboratory II",
+    "PHYS 2325 Mechanics",
+    "PHYS 2326 Electromagnetism and Waves",
+    "CS 3162 Professional Responsibility in Computer Science and Software Engineering",
+    "CS 3305 Discrete Mathematics for Computing II",
+    "CS 3341 Probability and Statistics in Computer Science and Software Engineering",
+    "CS 3345 Data Structures and Introduction to Algorithmic Analysis",
+    "CS 3354 Software Engineering",
+    "CS 3377 Systems Programming in UNIX and Other Environments",
+    "ECS 3390 Professional and Technical Communication3",
+    "CS 4141 Digital Systems Laboratory",
+    "CS 4337 Programming Language Paradigms",
+    "CS 4341 Digital Logic and Computer Design",
+    "CS 4347 Database Systems",
+    "CS 4348 Operating Systems Concepts",
+    "CS 4349 Advanced Algorithm Design and Analysis",
+    "CS 4384 Automata Theory",
+    "CS 4485 Computer Science Project"
+  ],
+  "Core": [
+    "RHET 1302 Rhetoric",
+    "ECS 3390 Professional and Technical Communication",
+    "PHYS 2325 Mechanics",
+    "PHYS 2326 Electromagnetism and Waves",
+    "GOVT 2305 American National Government",
+    "GOVT 2306 State and Local Government"
+  ],
+  "SelectionNeeded": {
+    "Math": {
+      "Hours": 6,
+      "Area": "Major Requirements",
+      "Options": [
+        [
+          "MATH 2413 Differential Calculus",
+          "MATH 2414 Integral Calculus"
+        ],
+        [
+          "MATH 2417 Calculus I",
+          "MATH 2419 Calculus II"
+        ]
+      ]
+    },
+    "Language, Philosophy, and Culture": {
+      "Hours": 3,
+      "Area": "Core",
+      "Options": [
+        ["AMS 2300 American Popular Culture"],
+        ["AMS 2341 American Studies for the Twenty-First Century"],
+        ["ATCM 2300 Introduction to TechnoCulture"],
+        ["ATCM 2322 Media Histories"],
+        ["ATCM 2325 Introduction to Ethnic Studies"],
+        ["FILM 1303 Transnational Film and Video"],
+        ["HIST 2340 Middle East Civilizations"],
+        ["HIST 2341 East Asian Civilizations"],
+        ["HIST 2350 Latin American Civilizations"],
+        ["HIST 2360 European Civilizations"],
+        ["HIST 2370 The Holocaust"],
+        ["HUMA 1301 Exploration of the Humanities"],
+        ["LIT 1301 Introduction to Literature"],
+        ["LIT 2322 Survey of African-American and African Diaspora Literatures"],
+        ["LIT 2329 Introduction to Ethnic American Literature"],
+        ["LIT 2331 Introduction to World Literature"],
+        ["PHIL 1301 Introduction to Philosophy"],
+        ["PHIL 1305 Introduction to Philosophy of Religion"],
+        ["PHIL 1306 Introduction to Ethics"],
+        ["PHIL 2316 History of Philosophy I"],
+        ["PHIL 2317 History of Philosophy II"],
+        ["RELS 1325 Introduction to Philosophy of Religion"]
+      ]
+    },
+    "Creative Arts":{
+      "Hours": 3,
+      "Area": "Core",
+      "Options": [
+        ["AHST 1303 Survey of Western Art History: Ancient to Medieval"],
+        ["AHST 1304 Survey of Western Art History: Renaissance to Modern"],
+        ["AHST 2331 Understanding Art"],
+        ["ARTS 1301 Exploration of the Arts"],
+        ["ATCM 2321 Reading Media Critically"],
+        ["CRWT 2301 Introduction to Creative Writing"],
+        ["DANC 1305 Introduction to World Dance Forms"],
+        ["DANC 1310 Understanding Dance"],
+        ["FILM 2332 Understanding Film"],
+        ["MUSI 1306 Understanding Music"],
+        ["MUSI 2321 Music Cultures of the World"],
+        ["MUSI 2322 Music in Western Civilization"],
+        ["PHIL 1307 Introduction to Philosophy of Art"],
+        ["THEA 1310 Understanding Theatre"]
+      ]
+    },
+    "American History": {
+      "Hours": 6,
+      "Area": "Core",
+      "Options": [
+        ["HIST 1301 U.S. History Survey to Civil War"],
+        ["HIST 1302 U.S. History Survey from Civil War"],
+        ["HIST 2301 History of Texas"],
+        ["HIST 2330 Themes and Ideas in American History"],
+        ["HIST 2381 African-American History"],
+        ["HIST 2384 U.S. Women from Settlement to Present"]
+      ]
+    },
+    "Social and Behavioral Sciences": {
+      "Hours": 3,
+      "Area": "Core",
+      "Options": [
+        ["BA 1310 Making Choices in Free Market Systems"],
+        ["BA 1320 Business in a Global World"],
+        ["CLDP 2314 Lifespan Development"],
+        ["CRIM 1301 Introduction to Criminal Justice"],
+        ["CRIM 1307 Introduction to Crime and Criminology"],
+        ["ECON 2301 Principles of Macroeconomics"],
+        ["ECON 2302 Principles of Microeconomics"],
+        ["GEOG 2303 World Regional Geography"],
+        ["GST 2300 Introduction to Gender Studies"],
+        ["PA 2325 Introduction to Public and Nonprofit Management"],
+        ["PSY 2301 Introduction to Psychology"],
+        ["PSY 2314 Lifespan Development"],
+        ["SOC 1301 Introduction to Sociology"],
+        ["SOC 1306 Contemporary Social Issues"],
+        ["SOC 2300 Introduction to Gender Studies"]
+      ]
+    }
+  }
+}
