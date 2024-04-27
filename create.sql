@@ -42,6 +42,8 @@ CREATE TABLE IF NOT EXISTS students (
         FOREIGN KEY (advisor_id) REFERENCES faculty (net_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+create index advisor_id on students (advisor_id);
+
 -- Create majors table. Which represents a degree and major.
 CREATE TABLE IF NOT EXISTS majors (
     major_id    int AUTO_INCREMENT PRIMARY KEY,
