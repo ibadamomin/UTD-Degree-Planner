@@ -105,12 +105,3 @@ CREATE TABLE IF NOT EXISTS student_course
     CONSTRAINT fk_student
         FOREIGN KEY (student_id) REFERENCES students (net_id)
 );
-
-CREATE TABLE IF NOT EXISTS computerscience_courses (
-    course_id INT AUTO_INCREMENT PRIMARY KEY,
-    course_prefix VARCHAR(5) NOT NULL,
-    course_number INT NOT NULL,
-    course_name VARCHAR(100) NOT NULL,
-    course_type VARCHAR(100) NOT NULL,
-    credit INT NOT NULL
-);
