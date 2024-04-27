@@ -6,7 +6,7 @@ use DegreePlanner\Database\Database;
 
 class User {
     public $id;
-    private $email;
+    public $email;
     private $passwordHash;
     public $firstName;
     public $middleName;
@@ -159,6 +159,85 @@ class User {
 
 
         $db->close();
+
+        return true;
+    }
+
+    public static function deleteUser($net_id, $password) {
+        $db = new Database();
+        $db = $db->db();
+
+        $user = User::findUserByIdWithDb($db, $net_id);
+        if ($user == null) {
+            password_hash('', PASSWORD_ARGON2ID); // We want to hash even when user DNE
+            $db->close();
+            return null;
+        }
+
+        if (!password_verify($password, $user->passwordHash)) {
+            $db->close();
+            return "Invalid password.";
+        }
+
+        $q = "DELETE FROM users WHERE NET_ID = ?";
+        $stmt = $db->prepare($q);
+
+        if (!$stmt) {
+            $db->close();
+            return "Could not delete user. Try again later.";
+        }
+
+        $stmt->bind_param("s", $net_id);
+
+        try {
+            $stmt->execute();
+        } catch (\mysqli_sql_exception $e) {
+            return "Could not delete user. Try again later.";
+        } finally {
+            $stmt->close();
+            $db->close();
+        }
+
+        return true;
+    }
+
+    public static function changePassword($net_id, $currentPassword, $newPassword) {
+        $db = new Database();
+        $db = $db->db();
+
+        $user = User::findUserByIdWithDb($db, $net_id);
+        if ($user == null) {
+            password_hash('', PASSWORD_ARGON2ID); // We want to hash even when user DNE
+            $db->close();
+            return null;
+        }
+
+        if (!password_verify($currentPassword, $user->passwordHash)) {
+            $db->close();
+            return "Current password incorrect.";
+        }
+
+        $password_hash = password_hash($newPassword, PASSWORD_ARGON2ID);
+
+        $q = "UPDATE users SET password_hash = ? WHERE net_id = ?";
+        $stmt = $db->prepare($q);
+
+        if (!$stmt) {
+            $db->close();
+            return "Could not change password. Try again later.";
+        }
+
+        $stmt->bind_param("ss", $password_hash, $net_id);
+
+        try {
+            $stmt->execute();
+        } catch (\mysqli_sql_exception $e) {
+            return "Could not change password. Try again later.";
+        } finally {
+            $user->passwordHash = $password_hash;
+            $stmt->close();
+            $db->close();
+        }
 
         return true;
     }

@@ -72,4 +72,8 @@ class Major {
         $this->major_name = $majorDetails["name"];
         $this->degree_type = $majorDetails["degree_type"];
     }
+
+    public function toString() {
+        return $this->degree_type . " - " . $this->major_name;
+    }
 }

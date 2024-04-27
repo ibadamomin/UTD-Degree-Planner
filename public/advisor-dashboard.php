@@ -65,6 +65,7 @@ foreach ($student_users as $student) {
 <body>
 <div class="advisor-dashboard">
     <section class="advisor-dashboard-child">
+        <a href="profile.php">Profile</a>
         <a href="logout.php">Logout</a>
     </section>
     <section class="advisor-dashboard-inner">

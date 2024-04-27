@@ -105,5 +105,5 @@ CREATE TABLE IF NOT EXISTS student_course
         FOREIGN KEY (course_id) REFERENCES courses(course_id) ON UPDATE CASCADE,
 
     CONSTRAINT fk_student
-        FOREIGN KEY (student_id) REFERENCES students (net_id) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (student_id) REFERENCES students (net_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
