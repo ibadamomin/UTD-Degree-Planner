@@ -70,6 +70,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="button-wrapper">
             <button class="button" type="submit" value="submit"> Log in </button>
         </div>
+        <div class="button-wrapper">
+            <a href="register.php" class="button">Register</a>
+        </div>
         <div style="color: red;">
         <?php
         if (isset($_GET['error'])) {
