@@ -153,7 +153,6 @@
     }
   ],
   "Core": [
-
     {
       "course_prefix": "RHET",
       "course_no": 1302,
@@ -381,7 +380,7 @@
     "American History": {
       "Hours": 6,
       "Area": "Core",
-      "Options":  [
+      "Options": [
         {
           "course_prefix": "HIST",
           "course_no": 1301,
@@ -419,85 +418,80 @@
       "Area": "Core",
       "Options": [
         {
-          "Options": [
-            {
-              "course_prefix": "BA",
-              "course_no": 1310,
-              "course_name": "Making Choices in Free Market Systems"
-            },
-            {
-              "course_prefix": "BA",
-              "course_no": 1320,
-              "course_name": "Business in a Global World"
-            },
-            {
-              "course_prefix": "CLDP",
-              "course_no": 2314,
-              "course_name": "Lifespan Development"
-            },
-            {
-              "course_prefix": "CRIM",
-              "course_no": 1301,
-              "course_name": "Introduction to Criminal Justice"
-            },
-            {
-              "course_prefix": "CRIM",
-              "course_no": 1307,
-              "course_name": "Introduction to Crime and Criminology"
-            },
-            {
-              "course_prefix": "ECON",
-              "course_no": 2301,
-              "course_name": "Principles of Macroeconomics"
-            },
-            {
-              "course_prefix": "ECON",
-              "course_no": 2302,
-              "course_name": "Principles of Microeconomics"
-            },
-            {
-              "course_prefix": "GEOG",
-              "course_no": 2303,
-              "course_name": "World Regional Geography"
-            },
-            {
-              "course_prefix": "GST",
-              "course_no": 2300,
-              "course_name": "Introduction to Gender Studies"
-            },
-            {
-              "course_prefix": "PA",
-              "course_no": 2325,
-              "course_name": "Introduction to Public and Nonprofit Management"
-            },
-            {
-              "course_prefix": "PSY",
-              "course_no": 2301,
-              "course_name": "Introduction to Psychology"
-            },
-            {
-              "course_prefix": "PSY",
-              "course_no": 2314,
-              "course_name": "Lifespan Development"
-            },
-            {
-              "course_prefix": "SOC",
-              "course_no": 1301,
-              "course_name": "Introduction to Sociology"
-            },
-            {
-              "course_prefix": "SOC",
-              "course_no": 1306,
-              "course_name": "Contemporary Social Issues"
-            },
-            {
-              "course_prefix": "SOC",
-              "course_no": 2300,
-              "course_name": "Introduction to Gender Studies"
-            }
-          ]
+          "course_prefix": "BA",
+          "course_no": 1310,
+          "course_name": "Making Choices in Free Market Systems"
+        },
+        {
+          "course_prefix": "BA",
+          "course_no": 1320,
+          "course_name": "Business in a Global World"
+        },
+        {
+          "course_prefix": "CLDP",
+          "course_no": 2314,
+          "course_name": "Lifespan Development"
+        },
+        {
+          "course_prefix": "CRIM",
+          "course_no": 1301,
+          "course_name": "Introduction to Criminal Justice"
+        },
+        {
+          "course_prefix": "CRIM",
+          "course_no": 1307,
+          "course_name": "Introduction to Crime and Criminology"
+        },
+        {
+          "course_prefix": "ECON",
+          "course_no": 2301,
+          "course_name": "Principles of Macroeconomics"
+        },
+        {
+          "course_prefix": "ECON",
+          "course_no": 2302,
+          "course_name": "Principles of Microeconomics"
+        },
+        {
+          "course_prefix": "GEOG",
+          "course_no": 2303,
+          "course_name": "World Regional Geography"
+        },
+        {
+          "course_prefix": "GST",
+          "course_no": 2300,
+          "course_name": "Introduction to Gender Studies"
+        },
+        {
+          "course_prefix": "PA",
+          "course_no": 2325,
+          "course_name": "Introduction to Public and Nonprofit Management"
+        },
+        {
+          "course_prefix": "PSY",
+          "course_no": 2301,
+          "course_name": "Introduction to Psychology"
+        },
+        {
+          "course_prefix": "PSY",
+          "course_no": 2314,
+          "course_name": "Lifespan Development"
+        },
+        {
+          "course_prefix": "SOC",
+          "course_no": 1301,
+          "course_name": "Introduction to Sociology"
+        },
+        {
+          "course_prefix": "SOC",
+          "course_no": 1306,
+          "course_name": "Contemporary Social Issues"
+        },
+        {
+          "course_prefix": "SOC",
+          "course_no": 2300,
+          "course_name": "Introduction to Gender Studies"
         }
-
       ]
     }
   }

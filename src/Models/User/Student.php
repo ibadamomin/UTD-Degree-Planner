@@ -43,7 +43,7 @@ class Student extends User {
         $q = <<<EOT
         SELECT course_id, instructor_id, course_prefix, course_no, course_section, course_name, semester, course_year 
         FROM student_course 
-        NATURAL JOIN COURSES 
+        NATURAL JOIN courses 
         WHERE student_id = ?
         EOT;
         $stmt = $db->prepare($q);
